@@ -1,7 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import loveIcon from '../app/img/love.svg';
-import flagIcon from '../app/img/flag.svg';
 
 const Footer = () => {
   return (
@@ -11,7 +9,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
           {/* Left Section - Brand */}
           <div className="space-y-4">
-            <h2 className="text-2xl lg:text-3xl font-bold text-[#1E3A5F]">Lock Leaks</h2>
+            {/* <h2 className="text-2xl lg:text-3xl font-bold text-[#1E3A5F]">Lock Leaks</h2> */}
+            <Image src="/img/footer_logo.png" alt="Lock Leaks" width={100} height={100} className="w-48 h-auto object-contain" />
             <p className="text-sm lg:text-base text-[#1a1a1a] leading-relaxed">
               Grow your revenue while we protect your content.
             </p>
@@ -19,7 +18,7 @@ const Footer = () => {
             {/* Made by a Woman */}
             <div className="flex items-center gap-2">
               <Image 
-                src={loveIcon} 
+                src="/img/love.svg" 
                 alt="Love" 
                 width={20} 
                 height={20} 
@@ -131,7 +130,7 @@ const Footer = () => {
             <p>© 2025 LockLeaks. All rights reserved.</p>
             {/* <span className="hidden md:inline">•</span> */}
             <p className="flex items-center gap-1">
-              Part of FaNetwork <Image src={flagIcon} alt="Flag" width={14} height={14} className="w-4 h-4 mt-1.5" />
+              Part of FaNetwork <Image src="/img/flag.svg" alt="Flag" width={14} height={14} className="w-4 h-4 mt-1.5" />
             </p>
           </div>
         </div>

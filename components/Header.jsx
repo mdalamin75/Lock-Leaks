@@ -17,11 +17,11 @@ const Header = () => {
             {/* Logo Image */}
             <div className="w-9 h-9 flex items-center justify-center flex-shrink-0">
               <Image 
-                src="/img/logo.png" 
+                src="/img/logo.svg" 
                 alt="Logo" 
                 width={36} 
                 height={36} 
-                className="w-full h-full object-contain"
+                className="w-24 h-24 object-contain"
               />
             </div>
             
@@ -37,19 +37,25 @@ const Header = () => {
           {/* Right Side Buttons */}
           <div className="flex items-center gap-2.5">
             {/* Log in Button - White background, dark text, light purple border, pill shape, subtle shadow */}
-            <button className="px-4 py-2 bg-white text-black rounded-xl border border-[#a39fb6ad] hover:bg-gray-50 transition-colors text-sm font-medium" style={{ boxShadow: '0 1px 2px 0 rgba(0, 0, 0, 0.05)' }}>
-              Log in
-            </button>
-            
-            {/* Start Free Button - Blue gradient (lighter top-left to deeper bottom-right), white text, star icon, prominent shadow */}
-            <button className="px-4 py-2 bg-gradient-to-br from-[#60A5FA] via-[#4A90E2] to-[#357ABD] text-white rounded-xl hover:from-[#4A90E2] hover:via-[#357ABD] hover:to-[#2A5F8F] transition-all text-sm font-medium flex items-center gap-1.5" style={{ boxShadow: '0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06)' }}>
-              Start Free
-              <Image 
-                src="/img/star.svg" 
+            <button className="">
+            <Image 
+                src="/img/login_button.svg" 
                 alt="Star" 
                 width={14} 
                 height={14} 
-                className="w-3.5 h-3.5"
+                className="w-24 h-8 object-contain"
+              />
+            </button>
+            
+            {/* Start Free Button - Blue gradient (lighter top-left to deeper bottom-right), white text, star icon, prominent shadow */}
+            <button className="">
+              {/* Start Free */}
+              <Image 
+                src="/img/blue_button.svg" 
+                alt="Star" 
+                width={14} 
+                height={14} 
+                className="w-24 h-8 object-contain"
               />
             </button>
           </div>
