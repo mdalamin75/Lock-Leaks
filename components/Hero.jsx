@@ -41,7 +41,7 @@ const Hero = () => {
       {/* Main Content */}
       <div className="text-center max-w-5xl mx-auto px-4">
         {/* Headline */}
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-5 lg:mb-8 leading-[1.1]">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-2 leading-[1.1]">
           <span className="bg-clip-text text-transparent" style={{
               backgroundImage: 'linear-gradient(15deg,rgba(46, 87, 97, 1) 0%, rgba(119, 202, 223, 1) 100%);'
             }}>Remove </span>
@@ -62,13 +62,13 @@ const Hero = () => {
         </h1>
 
         {/* Description */}
-        <p className="text-lg lg:text-xl xl:text-xl text-black mb-8 lg:mb-10 max-w-xl mx-auto leading-relaxed italic font-medium">
+        <p className="text-lg lg:text-xl xl:text-xl text-black mb-4 lg:mb-5 max-w-xl mx-auto leading-relaxed italic font-medium">
           We scan the web for stolen photos & videos and remove them fast. Your first leak check is 100% free.
         </p>
 
         {/* CTA Button and Made by a Woman */}
-        <div className="flex flex-col sm:flex-row items-center justify-center gap-6 lg:gap-8">
-          <button 
+        <div className="flex flex-col sm:flex-row items-center justify-center gap-4 lg:gap-4">
+          {/* <button 
             className="px-3 py-2 text-white rounded-xl hover:opacity-90 transition-all font-semibold text-base flex items-center gap-2 shadow-lg hover:shadow-xl"
             style={{
               background: 'linear-gradient(90deg, #60A5FA 0%, #4A90E2 50%, #357ABD 100%)'
@@ -82,6 +82,9 @@ const Hero = () => {
                 height={14} 
                 className="w-6 h-6"
               />
+          </button> */}
+          <button>
+            <Image src="/img/get_started.svg" alt="Get Started Free" width={500} height={500} className="w-40 h-12 object-contain" />
           </button>
           
           <div className="flex items-center gap-2">
