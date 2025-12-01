@@ -17,7 +17,7 @@ const Header = () => {
             {/* Logo Image */}
             <div className="w-9 h-9 flex items-center justify-center flex-shrink-0">
               <Image 
-                src="/img/logo.png" 
+                src="/img/logo_2.png" 
                 alt="Logo" 
                 width={36} 
                 height={36} 
@@ -48,7 +48,7 @@ const Header = () => {
             </button>
             
             {/* Start Free Button - Blue gradient (lighter top-left to deeper bottom-right), white text, star icon, prominent shadow */}
-            <button className="">
+            <button className="mt-1">
               {/* Start Free */}
               <Image 
                 src="/img/blue_button_2.svg" 

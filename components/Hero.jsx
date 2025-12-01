@@ -34,7 +34,7 @@ const Hero = () => {
           <span className="text-[#1FA8CA] font-medium text-sm lg:text-base">Monitoring and Takedown Service</span>
         </button> */}
         <button>
-          <Image src="/img/service_button.svg" alt="Service Button" width={14} height={14} className="w-full h-8 object-contain" />
+          <Image src="/img/service_2.png" alt="Service Button" width={400} height={300} className="w-2xl h-auto" />
         </button>
       </div>
 
