@@ -17,7 +17,7 @@ const Header = () => {
             {/* Logo Image */}
             <div className="w-9 h-9 flex items-center justify-center flex-shrink-0">
               <Image 
-                src="/img/logo.svg" 
+                src="/img/logo.png" 
                 alt="Logo" 
                 width={36} 
                 height={36} 
@@ -51,11 +51,11 @@ const Header = () => {
             <button className="">
               {/* Start Free */}
               <Image 
-                src="/img/blue_button.svg" 
+                src="/img/blue_button_2.svg" 
                 alt="Star" 
                 width={14} 
                 height={14} 
-                className="w-full h-8 object-contain"
+                className="w-full h-9 object-contain"
               />
             </button>
           </div>

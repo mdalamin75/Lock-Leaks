@@ -131,8 +131,8 @@ const PromotionalSection = () => {
           <div className="flex flex-col items-center gap-2 sm:gap-2.5">
             <span className="text-sm sm:text-base lg:text-lg text-gray-700 font-medium">Top Rated</span>
             <div className="flex gap-0.5 sm:gap-1">
-              {[...Array(5)].map((_, i) => (
-                <Image src="/img/pink_star.svg" alt="Star" width={14} height={14} className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
+              {[...Array(5)].map((_, index) => (
+                <Image key={index} src="/img/pink_star.svg" alt="Star" width={14} height={14} className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
               ))}
             </div>
           </div>

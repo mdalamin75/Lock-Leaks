@@ -7,10 +7,10 @@ const Hero = () => {
       {/* Hero Image */}
       <div className="relative z-10 mb-4 w-full max-w-4xl mx-auto flex justify-center items-center">
         <Image 
-          src="/img/hero_2.png" 
+          src="/img/hero_5x.png" 
           alt="Hero Image" 
-          width={400} 
-          height={400} 
+          width={500} 
+          height={500} 
           className="w-2xl h-auto object-cover"
           priority
         />
