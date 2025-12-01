@@ -43,7 +43,7 @@ const Header = () => {
                 alt="Star" 
                 width={14} 
                 height={14} 
-                className="w-24 h-8 object-contain"
+                className="w-full h-8 object-contain"
               />
             </button>
             
@@ -55,7 +55,7 @@ const Header = () => {
                 alt="Star" 
                 width={14} 
                 height={14} 
-                className="w-24 h-8 object-contain"
+                className="w-full h-8 object-contain"
               />
             </button>
           </div>

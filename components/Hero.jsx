@@ -7,11 +7,11 @@ const Hero = () => {
       {/* Hero Image */}
       <div className="relative z-10 mb-4 w-full max-w-4xl mx-auto flex justify-center items-center">
         <Image 
-          src="/img/hero.svg" 
+          src="/img/hero_2.png" 
           alt="Hero Image" 
           width={400} 
           height={400} 
-          className="w-full h-auto aspect-video"
+          className="w-2xl h-auto object-cover"
           priority
         />
       </div>
@@ -34,7 +34,7 @@ const Hero = () => {
           <span className="text-[#1FA8CA] font-medium text-sm lg:text-base">Monitoring and Takedown Service</span>
         </button> */}
         <button>
-          <Image src="/img/service_button.svg" alt="Service Button" width={14} height={14} className="w-48 h-8 object-contain" />
+          <Image src="/img/service_button.svg" alt="Service Button" width={14} height={14} className="w-full h-8 object-contain" />
         </button>
       </div>
 
