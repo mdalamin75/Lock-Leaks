@@ -32,6 +32,14 @@ const inter = localFont({
 export const metadata = {
   title: 'Lock Leaks',
   description: 'Grow your revenue while we protect your content.',
+  icons: {
+    icon: [
+      { url: '/img/logo.png', sizes: 'any' },
+      { url: '/img/logo_2.png', sizes: 'any' },
+    ],
+    shortcut: '/img/logo.png',
+    apple: '/img/logo_2.png',
+  },
 }
 
 export default function RootLayout({ children }) {

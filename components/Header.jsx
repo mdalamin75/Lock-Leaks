@@ -17,10 +17,10 @@ const Header = () => {
             {/* Logo Image */}
             <div className="w-9 h-9 flex items-center justify-center flex-shrink-0">
               <Image 
-                src="/img/logo_2.png" 
+                src="/img/logo_3.png" 
                 alt="Logo" 
-                width={36} 
-                height={36} 
+                width={500} 
+                height={500} 
                 className="w-24 h-24 object-contain"
               />
             </div>
