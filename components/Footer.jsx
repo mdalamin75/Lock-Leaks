@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <footer className="w-full bg-white border-t border-gray-200 pt-12 pb-8 px-6 lg:px-12">
+    <footer className="w-full bg-white pt-12 pb-8 px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
@@ -11,7 +11,7 @@ const Footer = () => {
           <div className="space-y-4">
             {/* <h2 className="text-2xl lg:text-3xl font-bold text-[#1E3A5F]">Lock Leaks</h2> */}
             <Image src="/img/footer_logo_2.png" alt="Lock Leaks" width={500} height={500} className="w-48 h-auto object-contain" />
-            <p className="text-sm lg:text-base text-[#1a1a1a] leading-relaxed">
+            <p className="text-sm lg:text-base font-medium leading-none text-[#1a1a1a]">
               Grow your revenue while we protect your content.
             </p>
             
@@ -66,70 +66,70 @@ const Footer = () => {
             </div>
 
             {/* All services are online */}
-            <div className="flex items-center gap-2 pt-2">
-              <div className="w-2.5 h-2.5 bg-green-500 rounded-full"></div>
-              <span className="text-sm text-[#1a1a1a]">All services are online</span>
+            <div className="flex items-center gap-1 pt-2">
+              <Image src="/img/green_right.svg" alt="Green right" width={50} height={50} className="w-5 h-4" />
+              <span className="text-xs text-[#1a1a1a]">All services are online</span>
             </div>
           </div>
 
           {/* Get Started Column */}
           <div className="space-y-4">
-            <h3 className="text-base lg:text-lg font-semibold text-[#1E3A5F]">Get Started</h3>
-            <ul className="space-y-2.5">
-              <li><a href="#" className="text-sm text-[#1a1a1a] hover:text-[#4A90E2] transition-colors">Remove OnlyFans Leaks</a></li>
-              <li><a href="#" className="text-sm text-[#1a1a1a] hover:text-[#4A90E2] transition-colors">Remove Fansly Leaks</a></li>
-              <li><a href="#" className="text-sm text-[#1a1a1a] hover:text-[#4A90E2] transition-colors">Remove Chaturbate Leaks</a></li>
-              <li><a href="#" className="text-sm text-[#1a1a1a] hover:text-[#4A90E2] transition-colors">Remove MyFreecams Leaks</a></li>
-              <li><a href="#" className="text-sm text-[#1a1a1a] hover:text-[#4A90E2] transition-colors">Remove LoyalFans Leaks</a></li>
-              <li><a href="#" className="text-sm text-[#1a1a1a] hover:text-[#4A90E2] transition-colors">Remove LiveJasmin Leaks</a></li>
-              <li><a href="#" className="text-sm text-[#1a1a1a] hover:text-[#4A90E2] transition-colors">Remove Bongacams Leaks</a></li>
+            <h3 className="text-base font-medium text-black">Get Started</h3>
+            <ul className="space-y-1.5">
+              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors">Remove OnlyFans Leaks</a></li>
+              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors">Remove Fansly Leaks</a></li>
+              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors">Remove Chaturbate Leaks</a></li>
+              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors">Remove MyFreecams Leaks</a></li>
+              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors">Remove LoyalFans Leaks</a></li>
+              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors">Remove LiveJasmin Leaks</a></li>
+              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors">Remove Bongacams Leaks</a></li>
             </ul>
           </div>
 
           {/* Explore Column */}
           <div className="space-y-4">
-            <h3 className="text-base lg:text-lg font-semibold text-[#1E3A5F]">Explore</h3>
-            <ul className="space-y-2.5">
-              <li><a href="#" className="text-sm text-[#1a1a1a] hover:text-[#4A90E2] transition-colors">Home</a></li>
-              <li><a href="#" className="text-sm text-[#1a1a1a] hover:text-[#4A90E2] transition-colors">Pricing</a></li>
-              <li><a href="#" className="text-sm text-[#1a1a1a] hover:text-[#4A90E2] transition-colors">Reviews</a></li>
-              <li><a href="#" className="text-sm text-[#1a1a1a] hover:text-[#4A90E2] transition-colors">DMCA Badges</a></li>
-              <li><a href="#" className="text-sm text-[#1a1a1a] hover:text-[#4A90E2] transition-colors">Blog</a></li>
-              <li><a href="#" className="text-sm text-[#1a1a1a] hover:text-[#4A90E2] transition-colors">Start Free</a></li>
+            <h3 className="text-base font-medium text-black">Explore</h3>
+            <ul className="space-y-1.5">
+              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors">Home</a></li>
+              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors">Pricing</a></li>
+              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors">Reviews</a></li>
+              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors">DMCA Badges</a></li>
+              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors">Blog</a></li>
+              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors">Start Free</a></li>
             </ul>
           </div>
 
           {/* Company Column */}
           <div className="space-y-4">
-            <h3 className="text-base lg:text-lg font-semibold text-[#1E3A5F]">Company</h3>
-            <ul className="space-y-2.5">
-              <li><a href="#" className="text-sm text-[#1a1a1a] hover:text-[#4A90E2] transition-colors">About Us</a></li>
-              <li><a href="#" className="text-sm text-[#1a1a1a] hover:text-[#4A90E2] transition-colors">For Agencies</a></li>
-              <li>
-                <a href="#" className="text-sm text-[#1a1a1a] hover:text-[#4A90E2] transition-colors inline-flex items-center gap-2">
+            <h3 className="text-base font-medium text-black">Company</h3>
+            <ul className="space-y-1.5">
+              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors px-2">About Us</a></li>
+              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors px-2">For Agencies</a></li>
+              <li className="bg-gradient-to-r from-[#e9e8e8] to-[#4abee2af] rounded-full max-w-36 px-2">
+                <a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors inline-flex items-center gap-1">
                   Affiliate Program 
-                  <span className="bg-[#60A5FA] text-white text-xs px-2 py-0.5 rounded">30%</span>
+                  <span className="text-xs">30%</span>
                 </a>
               </li>
-              <li><a href="#" className="text-sm text-[#1a1a1a] hover:text-[#4A90E2] transition-colors">Manage Your Data</a></li>
-              <li><a href="#" className="text-sm text-[#1a1a1a] hover:text-[#4A90E2] transition-colors">Contact Us</a></li>
-              <li><a href="#" className="text-sm text-[#1a1a1a] hover:text-[#4A90E2] transition-colors">Privacy Policy</a></li>
-              <li><a href="#" className="text-sm text-[#1a1a1a] hover:text-[#4A90E2] transition-colors">Cookies Policy</a></li>
-              <li><a href="#" className="text-sm text-[#1a1a1a] hover:text-[#4A90E2] transition-colors">Terms of Service</a></li>
+              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors px-2">Manage Your Data</a></li>
+              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors px-2">Contact Us</a></li>
+              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors px-2">Privacy Policy</a></li>
+              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors px-2">Cookies Policy</a></li>
+              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors px-2">Terms of Service</a></li>
             </ul>
           </div>
         </div>
 
         {/* Bottom Section */}
         <div className="border-t border-gray-200 pt-6">
-          <div className="flex flex-col items-center justify-center gap-2 text-sm text-gray-600">
+          <div className="flex flex-col items-center justify-center gap-1 text-xs text-[#6c757d]">
             <p className="flex items-center gap-1">
               Made with <span className="text-red-500">❤️</span> by Lock Leaks
             </p>
             {/* <span className="hidden md:inline">•</span> */}
             <p>© 2025 LockLeaks. All rights reserved.</p>
             {/* <span className="hidden md:inline">•</span> */}
-            <p className="flex items-center gap-1">
+            <p className="flex items-center gap-1 font-semibold">
               Part of FaNetwork <Image src="/img/flag.svg" alt="Flag" width={14} height={14} className="w-4 h-4 mt-1.5" />
             </p>
           </div>
