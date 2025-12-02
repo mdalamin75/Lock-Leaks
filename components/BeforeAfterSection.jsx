@@ -31,26 +31,26 @@ const BeforeAfterSection = () => {
       <div className="max-w-7xl mx-auto">
         {/* Title and Subtitle */}
         <div className="text-center mb-12 lg:mb-16">
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-1 leading-[1.1]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-5xl font-bold mb-1 leading-[1.1] font-plus-jakarta">
             <span className="bg-clip-text text-transparent" style={{
-                backgroundImage: 'linear-gradient(15deg,rgba(46, 87, 97, 1) 0%, rgba(119, 202, 223, 1) 100%);'
+                backgroundImage: 'linear-gradient(15deg, rgb(48, 100, 112) 20%, rgb(114, 200, 222) 70%);'
               }}>Before </span>
             <span 
               className="bg-clip-text text-transparent"
               style={{
-                backgroundImage: 'linear-gradient(90deg, rgba(141, 211, 228, 1) 0%, rgb(81 102 117 / 33%) 50%, rgba(74, 185, 212, 1) 100%)'
+                backgroundImage: 'linear-gradient(90deg, rgb(138, 210, 227), rgb(188, 229, 239) 50%, rgb(61, 171, 198)100%)'
               }}
             > &   
             </span>
             <span 
               className="bg-clip-text text-transparent"
               style={{
-                backgroundImage: 'linear-gradient(15deg, rgba(119, 202, 223, 1) 20%, rgba(46, 87, 97, 1) 80%)'
+                backgroundImage: 'linear-gradient(15deg, rgb(61, 174, 202) 20%, rgb(49, 88, 97) 80%)'
               }}
             > After
             </span>
           </h2>
-          <p className="text-base sm:text-lg lg:text-xl font-semibold text-gray-700 italic">
+          <p className="text-base sm:text-lg lg:text-xl font-bold text-black italic font-plus-jakarta">
             See how protecting your content <br className="hidden sm:block" /> changes everything.
           </p>
         </div>
@@ -58,7 +58,7 @@ const BeforeAfterSection = () => {
         {/* Main Content Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12 items-center">
           {/* Left Side - Before Items */}
-          <div className="flex flex-col gap-4 lg:gap-6 max-w-56">
+          <div className="flex flex-col gap-4 lg:gap-16 max-w-56">
             {beforeItems.map((item, index) => (
               <div
                 key={index}
@@ -73,7 +73,7 @@ const BeforeAfterSection = () => {
                     className="w-6 h-6 sm:w-7 sm:h-7"
                   />
                 </div>
-                <span className="text-sm font-medium text-gray-700">
+                <span className="text-sm font-medium text-black">
                   {item.text}
                 </span>
               </div>
@@ -85,18 +85,18 @@ const BeforeAfterSection = () => {
             {/* Arrow Group - positioned between left and center */}
             <div className="">
               <Image
-                src="/img/arrow_group.png"
+                src="/img/arrow_group.svg"
                 alt="Arrows"
-                width={500}
-                height={500}
-                className="w-full h-96"
+                width={700}
+                height={700}
+                className="w-full h-auto"
               />
             </div>
             
             <div>
               {/* Before Lock Leaks Label */}
               <div className="mb-0">
-                <p className="text-sm sm:text-sm text-gray-600 font-semibold text-center">
+                <p className="text-sm sm:text-sm text-black font-semibold text-center">
                   Before <br className="hidden sm:block" /> Lock Leaks
                 </p>
               </div>
@@ -106,48 +106,48 @@ const BeforeAfterSection = () => {
                 <Image
                   src="/img/profile.png"
                   alt="Profile"
-                  width={500}
-                  height={500}
-                  className="w-56 max-w-xs sm:max-w-sm lg:max-w-xl h-80 rounded-2xl"
+                  width={1000}
+                  height={1000}
+                  className="w-80 max-w-xs sm:max-w-sm lg:max-w-2xl h-auto rounded-2xl"
                 />
               </div>
             </div>
           {/* Right Side - After Stats */}
-          <div className="flex flex-col justify-between gap-6 lg:gap-8 items-center lg:items-start h-72">
+          <div className="flex flex-col justify-between gap-6 lg:gap-8 items-center lg:items-start h-96">
             {/* Dollar Amount */}
-            <div className="flex items-baseline gap-2">
+            <div className="flex items-baseline">
               <Image
-                src="/img/dollar_count.svg"
+                src="/img/dollar.svg"
                 alt="Dollar"
                 width={500}
                 height={500}
-                className="w-12 h-12 sm:w-16 sm:h-16 lg:w-40 lg:h-20"
+                className="w-12 h-12 sm:w-16 sm:h-16 lg:w-24 lg:h-20"
               />
-              {/* <div className="flex items-baseline">
-                <span className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-green-500">
-                  $0,0
+              <div className="flex items-baseline">
+                <span className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-black">
+                  0,
                 </span>
-                <span className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900">
-                  00
+                <span className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-black">
+                  0
                 </span>
-                <span className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-purple-500">
+                <span className="text-2xl sm:text-3xl lg:text-4xl xl:text-5xl font-bold text-black">
                   11
                 </span>
-              </div> */}
+              </div>
             </div>
 
             {/* Views Count */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center">
               <Image
-                src="/img/eye_count.svg"
+                src="/img/eye.svg"
                 alt="Views"
                 width={500}
                 height={500}
-                className="w-10 h-10 sm:w-12 sm:h-12 lg:w-40 lg:h-12"
+                className="w-10 h-10 sm:w-12 sm:h-12 lg:w-24 lg:h-12"
               />
-              {/* <span className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-gray-900">
+              <span className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold text-black">
                 000
-              </span> */}
+              </span>
             </div>
           </div>
           </div>

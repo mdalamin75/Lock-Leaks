@@ -5,56 +5,41 @@ const ComparisonSection = () => {
   const comparisonData = [
     {
       title: 'Platform Coverage',
-      rowImage: '/img/row.png',
+      rowImage: '/img/row.svg',
     },
     {
       title: 'Takedown Success Rate',
-      rowImage: '/img/row_2.png',
+      rowImage: '/img/row_2.svg',
     },
     {
       title: 'Resolution Speed',
-      rowImage: '/img/row_3.png',
+      rowImage: '/img/row_3.svg',
     },
     {
       title: 'Deep Investigation',
-      rowImage: '/img/row_4.png',
+      rowImage: '/img/row_4.svg',
     },
   ];
 
   return (
     <section className="w-full bg-white py-12 lg:py-20 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-2xl mx-auto">
         {/* Title and Subtitle */}
         <div className="text-center mb-8 lg:mb-12">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold mb-2 leading-tight">
-            <span 
-              className="bg-clip-text text-transparent"
-              style={{
-                backgroundImage: 'linear-gradient(15deg, rgba(119, 202, 223, 1) 0%, rgba(74, 185, 212, 1) 100%)'
-              }}
-            >
-               
-            </span>
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-5xl font-bold mb-2 leading-tight font-plus-jakarta">
               <span className="bg-clip-text text-transparent" style={{
-                backgroundImage: 'linear-gradient(15deg,rgba(46, 87, 97, 1) 0%, rgba(119, 202, 223, 1) 100%);'
+                backgroundImage: 'linear-gradient(15deg, rgb(49, 109, 124) 0%, rgb(154, 216, 231) 100%);'
               }}>Lock </span>
-            {/* <span 
-              className="bg-clip-text text-transparent"
-              style={{
-                backgroundImage: 'linear-gradient(90deg, rgba(141, 211, 228, 1) 0%, rgb(81 102 117 / 33%) 50%, rgba(74, 185, 212, 1) 100%)'
-              }}
-            > Leaked  
-            </span> */}
             <span 
               className="bg-clip-text text-transparent"
               style={{
-                backgroundImage: 'linear-gradient(15deg, rgba(119, 202, 223, 1) 20%, rgba(46, 87, 97, 1) 80%)'
+                backgroundImage: 'linear-gradient(15deg, rgb(138, 210, 227) 20%, rgb(49, 109, 124) 80%)'
               }}
             > Leaks
             </span>
-            <span className="text-[#1a1a1a]"> vs Others</span>
+            <span className="text-black"> vs Others</span>
           </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-[#1a1a1a] font-medium mt-2 italic">
+          <p className="text-base sm:text-lg lg:text-xl text-black font-bold mt-2 italic font-plus-jakarta">
             The Real Difference
           </p>
         </div>
@@ -64,7 +49,7 @@ const ComparisonSection = () => {
           <div className="flex items-center gap-4 sm:gap-6">
             <div className="flex items-center gap-2">
               <div className="w-4 h-4 bg-gray-600 rounded"></div>
-              <span className="text-xs sm:text-sm text-[#1a1a1a]">With others.</span>
+              <span className="text-xs sm:text-sm text-black">With others.</span>
             </div>
             <div className="flex items-center gap-2">
               <div 
@@ -73,7 +58,7 @@ const ComparisonSection = () => {
                   background: 'linear-gradient(15deg, rgba(119, 202, 223, 1) 0%, rgba(74, 185, 212, 1) 100%)'
                 }}
               ></div>
-              <span className="text-xs sm:text-sm text-[#1a1a1a]">With Lock Leaks.</span>
+              <span className="text-xs sm:text-sm text-black">With Lock Leaks.</span>
             </div>
           </div>
         </div>
@@ -104,7 +89,7 @@ const ComparisonSection = () => {
               alt="Start Free Scan"
               width={300}
               height={80}
-              className="w-36 sm:w-40 lg:w-44 h-auto"
+              className="w-36 sm:w-40 lg:w-40 h-auto"
             />
           </button>
         </div>

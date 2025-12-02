@@ -6,17 +6,17 @@ const FooterTop = () => {
     <section 
       className="w-full max-w-7xl mx-auto relative overflow-hidden bg-cover bg-center bg-no-repeat rounded-2xl"
       style={{
-        backgroundImage: 'url(/img/footer_top_bg.png)',
+        backgroundImage: 'url(/img/footer_top_bg.svg)',
       }}
     >
       {/* Gradient Overlay for better text readability */}
-      <div className="absolute inset-0 bg-gradient-to-r from-teal-900/90 via-teal-700/80 to-blue-400/90"></div>
+      <div className="absolute"></div>
 
       {/* Content */}
       <div className="relative z-10 py-12 sm:py-10 lg:py-12 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           {/* Main Heading */}
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-4 font-plus-jakarta">
             Protecting what you create.
           </h2>
 
