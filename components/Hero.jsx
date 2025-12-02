@@ -17,7 +17,7 @@ const Hero = () => {
       </div>
 
       {/* Monitoring and Takedown Service Button */}
-      <div className="flex justify-center mb-8 lg:mb-12">
+      <div className=" mb-8 lg:mb-12">
         {/* <button 
           className="px-4 py-1 rounded-full flex items-center gap-3 shadow-lg hover:shadow-md transition-all backdrop-blur-lg border border-white/30"
           style={{
@@ -34,7 +34,7 @@ const Hero = () => {
           <span className="text-[#1FA8CA] font-medium text-sm lg:text-base">Monitoring and Takedown Service</span>
         </button> */}
         <button>
-          <Image src="/img/service_2.png" alt="Service Button" width={400} height={300} className="w-2xl h-auto" />
+          <Image src="/img/service_button_2.svg" alt="Service Button" width={400} height={300} className="w-2xl h-auto" />
         </button>
       </div>
 
