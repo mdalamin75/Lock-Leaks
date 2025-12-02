@@ -7,7 +7,7 @@ const Hero = () => {
       {/* Hero Image */}
       <div className="relative z-10 mb-4 w-full max-w-4xl mx-auto flex justify-center items-center">
         <Image 
-          src="/img/hero_5x.png" 
+          src="/img/hero_bg.svg" 
           alt="Hero Image" 
           width={500} 
           height={500} 
@@ -18,23 +18,17 @@ const Hero = () => {
 
       {/* Monitoring and Takedown Service Button */}
       <div className=" mb-8 lg:mb-12">
-        {/* <button 
-          className="px-4 py-1 rounded-full flex items-center gap-3 shadow-lg hover:shadow-md transition-all backdrop-blur-lg border border-white/30"
-          style={{
-            background: '#1FA8CA', background: 'radial-gradient(circle,rgba(31, 168, 202, 0.13) 58%, rgba(244, 244, 244, 1) 100%)'
-          }}
-        >
+        <button className="relative px-6 py-2 rounded-full flex items-center shadow hover:shadow-md transition-all overflow-hidden min-w-[293px]">
           <Image 
-            src="/img/circle.svg" 
-            alt="Circle Icon" 
-            width={50} 
-            height={50} 
-            className="w-10 h-10 flex-shrink-0"
+            src="/img/service_button_bg.svg" 
+            alt="Service Button Background" 
+            width={293} 
+            height={35} 
+            className="absolute inset-0 w-full h-full object-cover" 
           />
-          <span className="text-[#1FA8CA] font-medium text-sm lg:text-base">Monitoring and Takedown Service</span>
-        </button> */}
-        <button>
-          <Image src="/img/service_button_2.svg" alt="Service Button" width={400} height={300} className="w-2xl h-auto" />
+          <span className="relative z-10 text-[#1FA8CA] font-regular text-sm whitespace-nowrap ml-14">
+            Monitoring and Takedown Service
+          </span>
         </button>
       </div>
 
