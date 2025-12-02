@@ -36,9 +36,9 @@ const Hero = () => {
       </div>
 
       {/* Main Content */}
-      <div className="text-center max-w-5xl mx-auto px-4">
+      <div className="text-center max-w-5xl mx-auto px-4 font-plus-jakarta">
         {/* Headline */}
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-2 leading-[1.1]">
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-plus-jakarta font-bold mb-2 leading-[1.1]">
           <span className="bg-clip-text text-transparent" style={{
               backgroundImage: 'linear-gradient(15deg, rgb(48, 100, 112) 20%, rgb(114, 200, 222) 70%);'
             }}>Remove </span>
@@ -59,7 +59,7 @@ const Hero = () => {
         </h1>
 
         {/* Description */}
-        <p className="text-lg lg:text-xl xl:text-xl text-black mb-4 lg:mb-5 max-w-xl mx-auto leading-relaxed italic font-bold">
+        <p className="text-lg lg:text-xl xl:text-xl text-black mb-4 lg:mb-5 max-w-xl mx-auto leading-relaxed italic font-bold font-plus-jakarta">
           We scan the web for stolen photos & videos and remove them fast. Your first leak check is 100% free.
         </p>
 
@@ -77,7 +77,7 @@ const Hero = () => {
                 height={14} 
                 className="w-9 h-9"
               />
-            <span className="text-black font-bold text-sm lg:text-base">Made by a Woman</span>
+            <span className="text-black font-bold text-sm lg:text-base font-plus-jakarta">Made by a Woman</span>
           </div>
         </div>
       </div>

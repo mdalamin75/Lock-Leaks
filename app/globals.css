@@ -14,6 +14,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.font-plus-jakarta {
+  font-family: var(--font-plus-jakarta-sans), system-ui, -apple-system, sans-serif;
+}
+
 @keyframes float {
   0%, 100% {
     transform: translateY(0px);

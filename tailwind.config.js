@@ -15,6 +15,7 @@ module.exports = {
       },
       fontFamily: {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
+        'plus-jakarta': ['var(--font-plus-jakarta-sans)', 'system-ui', 'sans-serif'],
       },
     },
   },

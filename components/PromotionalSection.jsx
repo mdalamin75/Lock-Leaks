@@ -4,13 +4,13 @@ import Image from 'next/image';
 const PromotionalSection = () => {
   // Platform logos data
   const platforms = [
-    { name: 'OnlyFans', color: '#00AFF0' },
-    { name: 'CamSoda', color: '#FF69B4' },
-    { name: 'MyFreeCams', color: '#00C853' },
-    { name: 'LIVEJASMIN', color: '#E53935' },
-    { name: 'BongaCams', color: '#FF69B4' },
-    { name: 'STRIPCHAT', color: '#FF69B4' },
-    { name: 'Chaturbate', color: '#FF6B35' },
+    { name: 'OnlyFans', logo: '/img/platform/only_fans.svg' },
+    { name: 'CamSoda', logo: '/img/platform/camsoda.svg' },
+    { name: 'MyFreeCams', logo: '/img/platform/my_free_cams.svg' },
+    { name: 'LIVEJASMIN', logo: '/img/platform/livejasmin.svg' },
+    { name: 'BongaCams', logo: '/img/platform/bonga_cams.svg' },
+    { name: 'STRIPCHAT', logo: '/img/platform/strip_chat.svg' },
+    { name: 'Chaturbate', logo: '/img/platform/chaturbate.svg' },
   ];
 
   // Profile images with stats - arranged as 3 on top, 2 on bottom
@@ -26,18 +26,19 @@ const PromotionalSection = () => {
     <section className="w-full bg-white py-12 lg:py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Platform Logos */}
-        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 md:gap-6 lg:gap-8 mb-10 sm:mb-12 lg:mb-16">
+        <div className="flex flex-wrap lg:flex-nowrap items-center justify-center gap-3 sm:gap-4 md:gap-6 lg:gap-8 mb-10 sm:mb-12 lg:mb-16">
           {platforms.map((platform, index) => (
             <div
               key={index}
               className="flex items-center justify-center"
             >
-              <div
-                className="text-base sm:text-lg md:text-xl lg:text-2xl font-bold whitespace-nowrap"
-                style={{ color: platform.color }}
-              >
-                {platform.name}
-              </div>
+              <Image
+                src={platform.logo}
+                alt={platform.name}
+                width={120}
+                height={40}
+                className="w-20 h-8 sm:w-24 sm:h-10 md:w-28 md:h-12 lg:w-32 lg:h-12 object-contain opacity-90 hover:opacity-100 transition-opacity"
+              />
             </div>
           ))}
         </div>
@@ -53,16 +54,16 @@ const PromotionalSection = () => {
               >
                 {/* Profile Image Container */}
                 <div className="relative">
-                  <Image src="/img/model.png" alt="Profile Image" width={200} height={200} className="w-full h-auto mt-6" />
+                  <Image src="/img/model.png" alt="Profile Image" width={200} height={200} className="w-full h-auto mt-8" />
                   
                   {/* Stat Badge - positioned at top edge */}
                   <div className="absolute top-0 left-1/2 transform -translate-x-1/2 z-10">
                     <Image 
                       src={stat.image} 
                       alt={stat.icon} 
-                      width={40} 
-                      height={40} 
-                      className="w-16 h-6 object-contain"
+                      width={200} 
+                      height={200} 
+                      className="w-20 h-9 object-contain"
                     />
                   </div>
                 </div>
@@ -71,7 +72,7 @@ const PromotionalSection = () => {
           </div>
                   {/* Main Message */}
         <div className="text-center mb-8 sm:mb-10 lg:mb-12 max-w-4xl mx-auto">
-          <p className="text-base sm:text-lg md:text-2xl lg:text-4xl xl:text-5xl text-gray-700 italic font-medium leading-relaxed px-4">
+          <p className="text-base sm:text-lg md:text-2xl lg:text-4xl xl:text-5xl text-black italic font-medium leading-relaxed px-4">
             Helping creators protect their content<br className="hidden sm:block" />
             and boost monthly income by<br className="hidden sm:block" />
             removing leaks online.
@@ -81,7 +82,7 @@ const PromotionalSection = () => {
         {/* Top Rated Section */}
         <div className="flex flex-col items-center justify-center gap-2">
           <div className="flex flex-col items-center gap-2 sm:gap-2.5">
-            <span className="text-sm sm:text-base lg:text-lg text-gray-700 font-medium">Top Rated</span>
+            <span className="text-sm sm:text-base lg:text-lg text-black font-medium">Top Rated</span>
             <div className="flex gap-0.5 sm:gap-1">
               {[...Array(5)].map((_, index) => (
                 <Image key={index} src="/img/pink_star.svg" alt="Star" width={14} height={14} className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
@@ -91,24 +92,24 @@ const PromotionalSection = () => {
         </div>
 
           {/* Bottom Row - 2 images, centered */}
-          <div className="flex justify-between items-start gap-3 sm:gap-4 md:gap-6 lg:gap-8 w-full max-w-6xl -mt-32">
+          <div className="flex justify-between items-start gap-3 sm:gap-4 md:gap-6 lg:gap-8 w-full max-w-6xl -mt-16 lg:-mt-24">
             {profileStats.slice(3, 5).map((stat, index) => (
               <div
                 key={index + 3}
-                className="relative flex flex-col items-center max-w-48"
+                className="relative flex flex-col items-center max-w-32 lg:max-w-48"
               >
                 {/* Profile Image Container */}
                 <div className="relative">
-                  <Image src="/img/model.png" alt="Profile Image" width={200} height={200} className="w-full h-auto  mt-6" />
+                  <Image src="/img/model.png" alt="Profile Image" width={200} height={200} className="w-full h-auto mt-8" />
                   
                   {/* Stat Badge - positioned at top edge */}
                   <div className="absolute top-0 left-1/2 transform -translate-x-1/2 z-10">
                     <Image 
                       src={stat.image} 
                       alt={stat.icon} 
-                      width={40} 
-                      height={40} 
-                      className="w-16 h-6 "
+                      width={200} 
+                      height={200} 
+                      className="w-20 h-9 "
                     />
                   </div>
                 </div>
