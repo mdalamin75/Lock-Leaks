@@ -6,24 +6,13 @@ const Hero = () => {
     <section className="w-full bg-white min-h-screen flex flex-col items-center justify-center pt-24 pb-12 lg:pt-28 lg:pb-20 px-6 lg:px-8">
       {/* Hero Image */}
       <div className="relative z-10 mb-4 w-full max-w-4xl mx-auto flex flex-col justify-center items-center">
-        {/* Lock Logo - Top Center */}
-        <div className="relative z-20 -mb-2 lg:-mb-14 -ml-5">
-          <Image 
-            src="/img/hero_logo.svg" 
-            alt="Lock Logo" 
-            width={500} 
-            height={500} 
-            className="w-10 h-10 object-contain"
-            priority
-          />
-        </div>
         {/* Hero Background with Arcs and Logos */}
         <div className="relative w-full flex justify-center items-center">
           <Image 
-            src="/img/hero_2.svg" 
+            src="/img/hero_3.svg" 
             alt="Hero Background" 
-            width={391} 
-            height={252} 
+            width={1000} 
+            height={1000} 
             className="w-full max-w-[391px] h-auto object-contain"
             priority
           />
