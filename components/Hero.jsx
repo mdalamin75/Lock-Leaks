@@ -9,10 +9,10 @@ const Hero = () => {
         {/* Lock Logo - Top Center */}
         <div className="relative z-20 -mb-2 lg:-mb-14 -ml-5">
           <Image 
-            src="/img/hero_logo.png" 
+            src="/img/hero_logo.svg" 
             alt="Lock Logo" 
-            width={80} 
-            height={80} 
+            width={500} 
+            height={500} 
             className="w-10 h-10 object-contain"
             priority
           />
@@ -51,46 +51,31 @@ const Hero = () => {
         {/* Headline */}
         <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-2 leading-[1.1]">
           <span className="bg-clip-text text-transparent" style={{
-              backgroundImage: 'linear-gradient(15deg,rgba(46, 87, 97, 1) 0%, rgba(119, 202, 223, 1) 100%);'
+              backgroundImage: 'linear-gradient(15deg, rgb(48, 100, 112) 20%, rgb(114, 200, 222) 70%);'
             }}>Remove </span>
           <span 
             className="bg-clip-text text-transparent"
             style={{
-              backgroundImage: 'linear-gradient(90deg, rgba(141, 211, 228, 1) 0%, rgb(81 102 117 / 33%) 50%, rgba(74, 185, 212, 1) 100%)'
+              backgroundImage: 'linear-gradient(90deg, rgb(138, 210, 227), rgb(188, 229, 239) 50%, rgb(61, 171, 198))'
             }}
           > Leaked  
           </span>
           <span 
             className="bg-clip-text text-transparent"
             style={{
-              backgroundImage: 'linear-gradient(15deg, rgba(119, 202, 223, 1) 20%, rgba(46, 87, 97, 1) 80%)'
+              backgroundImage: 'linear-gradient(15deg, rgb(61, 174, 202) 20%, rgb(49, 88, 97) 80%)'
             }}
           > Content
           </span>
         </h1>
 
         {/* Description */}
-        <p className="text-lg lg:text-xl xl:text-xl text-black mb-4 lg:mb-5 max-w-xl mx-auto leading-relaxed italic font-medium">
+        <p className="text-lg lg:text-xl xl:text-xl text-black mb-4 lg:mb-5 max-w-xl mx-auto leading-relaxed italic font-bold">
           We scan the web for stolen photos & videos and remove them fast. Your first leak check is 100% free.
         </p>
 
         {/* CTA Button and Made by a Woman */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 lg:gap-4">
-          {/* <button 
-            className="px-3 py-2 text-white rounded-xl hover:opacity-90 transition-all font-semibold text-base flex items-center gap-2 shadow-lg hover:shadow-xl"
-            style={{
-              background: 'linear-gradient(90deg, #60A5FA 0%, #4A90E2 50%, #357ABD 100%)'
-            }}
-          >
-            Get Started Free
-            <Image 
-                src="/img/star.svg" 
-                alt="Star" 
-                width={14} 
-                height={14} 
-                className="w-6 h-6"
-              />
-          </button> */}
           <button>
             <Image src="/img/get_started.svg" alt="Get Started Free" width={500} height={500} className="w-40 h-12 object-contain" />
           </button>
@@ -103,7 +88,7 @@ const Hero = () => {
                 height={14} 
                 className="w-9 h-9"
               />
-            <span className="text-[#1a1a1a] font-semibold text-sm lg:text-base">Made by a Woman</span>
+            <span className="text-black font-bold text-sm lg:text-base">Made by a Woman</span>
           </div>
         </div>
       </div>
