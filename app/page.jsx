@@ -3,6 +3,7 @@ import Hero from '@/components/Hero';
 import PromotionalSection from '@/components/PromotionalSection';
 import BeforeAfterSection from '@/components/BeforeAfterSection';
 import ComparisonSection from '@/components/ComparisonSection';
+import TrustedSection from '@/components/TrustedSection';
 import FooterTop from '@/components/FooterTop';
 import Footer from '@/components/Footer';
 
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <PromotionalSection />
       <BeforeAfterSection />
+      <TrustedSection />
       <ComparisonSection />
       <FooterTop />
       <Footer />
