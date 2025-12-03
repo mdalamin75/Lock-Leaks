@@ -6,6 +6,9 @@ import ComparisonSection from '@/components/ComparisonSection';
 import TrustedSection from '@/components/TrustedSection';
 import ProtectionSection from '@/components/ProtectionSection';
 import AutomaticScanSection from '@/components/AutomaticScanSection';
+import TestimonialSection from '@/components/TestimonialSection';
+import HowItWorksSection from '@/components/HowItWorksSection';
+import FAQSection from '@/components/FAQSection';
 import FooterTop from '@/components/FooterTop';
 import Footer from '@/components/Footer';
 
@@ -19,7 +22,10 @@ export default function Home() {
       <TrustedSection />
       <ProtectionSection />
       <AutomaticScanSection />
+      <TestimonialSection />
+      <HowItWorksSection />
       <ComparisonSection />
+      <FAQSection />
       <FooterTop />
       <Footer />
     </main>

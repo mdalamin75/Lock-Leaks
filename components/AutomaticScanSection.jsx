@@ -24,7 +24,7 @@ const AutomaticScanSection = () => {
       <div className="max-w-7xl mx-auto">
         {/* Title */}
         <div className="text-center mb-6 sm:mb-8">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-5xl font-bold mb-3 sm:mb-4 font-plus-jakarta">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 sm:mb-4 font-plus-jakarta">
             <span className="text-black">Automatic </span>
               <span className="bg-clip-text text-transparent" style={{
                   backgroundImage: 'linear-gradient(15deg, rgb(48, 100, 112) 20%, rgb(114, 200, 222) 70%);'

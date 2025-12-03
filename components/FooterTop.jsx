@@ -30,7 +30,7 @@ const FooterTop = () => {
             {/* Profile Group */}
             <div className="flex items-center">
               <Image
-                src="/img/profile_group.png"
+                src="/img/profile_group.svg"
                 alt="User Profiles"
                 width={60}
                 height={60}

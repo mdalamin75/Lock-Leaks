@@ -113,7 +113,7 @@ const TrustedSection = () => {
       <div className="max-w-7xl mx-auto">
         {/* Title */}
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-bold mb-4 font-plus-jakarta">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 font-plus-jakarta">
             <span className="text-black">Trusted </span>
             <span className="bg-clip-text text-transparent" style={{
                 backgroundImage: 'linear-gradient(15deg, rgb(48, 100, 112) 20%, rgb(114, 200, 222) 70%);'
