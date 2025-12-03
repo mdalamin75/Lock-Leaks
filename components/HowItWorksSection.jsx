@@ -51,7 +51,7 @@ const HowItWorksSection = () => {
               }}
             >Works</span>
           </h2>
-          <p className="text-lg sm:text-xl lg:text-2xl text-black font-semibold font-plus-jakarta italic">
+          <p className="text-lg sm:text-xl lg:text-xl text-black font-bold font-plus-jakarta italic">
             3 simple steps to keep your <br className="hidden sm:block" /> content safe
           </p>
         </div>
@@ -72,6 +72,7 @@ const HowItWorksSection = () => {
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
+                    marginLeft: index === 0 ? '16px' : '0',
                   }}
                 >
                   {step.number}

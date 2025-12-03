@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 
 const Header = () => {
   return (
@@ -37,15 +38,15 @@ const Header = () => {
           {/* Right Side Buttons */}
           <div className="flex items-center gap-2.5">
             {/* Log in Button - White background, dark text, light purple border, pill shape, subtle shadow */}
-            <button className="">
+            <Link href="/login" className="hover:opacity-80 transition-opacity">
             <Image 
                 src="/img/login_button.svg" 
-                alt="Star" 
+                alt="Login" 
                 width={14} 
                 height={14} 
                 className="w-full h-8 object-contain"
               />
-            </button>
+            </Link>
             
             {/* Start Free Button - Blue gradient (lighter top-left to deeper bottom-right), white text, star icon, prominent shadow */}
             <button className="mt-1">

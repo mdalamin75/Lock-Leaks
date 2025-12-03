@@ -75,16 +75,16 @@ const TestimonialSection = () => {
             <Image
               src="/img/testimonial_button_before.svg"
               alt="Previous"
-              width={56}
-              height={56}
+              width={200}
+              height={200}
               className="w-full h-full object-contain opacity-100 group-hover:opacity-0 absolute transition-opacity"
             />
             {/* Hover state - testimonial_button.svg on left side, needs flip */}
             <Image
               src="/img/testimonial_button.svg"
               alt="Previous"
-              width={56}
-              height={56}
+              width={200}
+              height={200}
               className="w-full h-full object-contain opacity-0 group-hover:opacity-100 absolute transition-opacity scale-x-[-1]"
             />
           </button>
@@ -99,16 +99,16 @@ const TestimonialSection = () => {
             <Image
               src="/img/testimonial_button_before.svg"
               alt="Next"
-              width={56}
-              height={56}
+              width={200}
+              height={200}
               className="w-full h-full object-contain opacity-100 group-hover:opacity-0 absolute transition-opacity scale-x-[-1]"
             />
             {/* Hover state - testimonial_button.svg on right side, no flip needed */}
             <Image
               src="/img/testimonial_button.svg"
               alt="Next"
-              width={56}
-              height={56}
+              width={200}
+              height={200}
               className="w-full h-full object-contain opacity-0 group-hover:opacity-100 absolute transition-opacity"
             />
           </button>
@@ -122,14 +122,20 @@ const TestimonialSection = () => {
               
               {/* Profile Image Container */}
               <div className="relative z-10 flex-shrink-0">
-                <div className="relative w-24 h-24 sm:w-28 sm:h-28 lg:w-32 lg:h-32 rounded-xl sm:rounded-2xl overflow-hidden">
+                <div className="relative w-28 h-28 sm:w-32 sm:h-32 lg:w-48 lg:h-48 rounded-xl sm:rounded-2xl overflow-hidden">
                   <Image
                     src={currentTestimonial.profileImage}
                     alt="Creator Profile"
-                    width={128}
-                    height={128}
+                    width={300}
+                    height={300}
                     className="w-full h-full object-cover"
                   />
+                  {/* Top 0,8% Text */}
+                  <div className="absolute bottom-7 right-3">
+                    <span className="text-xs sm:text-xs lg:text-xs font-bold text-black font-plus-jakarta">
+                      {currentTestimonial.badge.text}
+                    </span>
+                  </div>
                 </div>
               </div>
             </div>

@@ -48,16 +48,11 @@ const ComparisonSection = () => {
         <div className="flex justify-end mb-6 lg:mb-8">
           <div className="flex items-center gap-4 sm:gap-6">
             <div className="flex items-center gap-2">
-              <div className="w-4 h-4 bg-gray-600 rounded"></div>
+              <Image src="/img/black_dot.svg" alt="Black Dot" width={20} height={20} className="w-4 h-3 object-contain" />
               <span className="text-xs sm:text-sm text-black">With others.</span>
             </div>
             <div className="flex items-center gap-2">
-              <div 
-                className="w-4 h-4 rounded"
-                style={{
-                  background: 'linear-gradient(15deg, rgba(119, 202, 223, 1) 0%, rgba(74, 185, 212, 1) 100%)'
-                }}
-              ></div>
+              <Image src="/img/blue_dot.svg" alt="Blue Dot" width={20} height={20} className="w-4 h-3 object-contain" />
               <span className="text-xs sm:text-sm text-black">With Lock Leaks.</span>
             </div>
           </div>

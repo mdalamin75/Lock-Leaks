@@ -13,7 +13,7 @@ const Hero = () => {
             alt="Hero Background" 
             width={1000} 
             height={1000} 
-            className="w-full max-w-[391px] h-auto object-contain"
+            className="w-full max-w-[500px] h-auto object-contain"
             priority
           />
         </div>
