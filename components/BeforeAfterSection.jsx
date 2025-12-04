@@ -27,7 +27,7 @@ const BeforeAfterSection = () => {
   ];
 
   return (
-    <section className="w-full bg-white py-12 lg:py-20 px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-white pb-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Title and Subtitle */}
         <div className="text-center mb-12 lg:mb-16">

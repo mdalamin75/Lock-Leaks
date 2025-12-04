@@ -47,7 +47,7 @@ const TestimonialSection = () => {
   const currentTestimonial = testimonials[currentIndex];
 
   return (
-    <section className="w-full bg-white py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-white py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto">
         {/* Title */}
         <div className="text-center">

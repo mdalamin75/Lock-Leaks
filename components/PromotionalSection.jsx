@@ -23,7 +23,7 @@ const PromotionalSection = () => {
   ];
 
   return (
-    <section className="w-full bg-white py-12 lg:py-20 px-4 sm:px-6 lg:px-8">
+    <section className="w-full bg-white pt-12 pb-0 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         {/* Platform Logos */}
         <div className="flex flex-wrap lg:flex-nowrap items-center justify-center gap-3 sm:gap-4 md:gap-6 lg:gap-8 mb-10 sm:mb-12 lg:mb-16">
