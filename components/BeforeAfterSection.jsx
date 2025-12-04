@@ -56,7 +56,7 @@ const BeforeAfterSection = () => {
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 lg:gap-12 items-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-6 lg:gap-6 items-center">
           {/* Left Side - Before Items */}
           <div className="flex flex-col justify-center items-center gap-3 sm:gap-4 lg:gap-16 w-full order-1 md:order-1">
             {beforeItems.map((item, index) => (
@@ -81,15 +81,15 @@ const BeforeAfterSection = () => {
           </div>
 
           {/* Center - Model Image with Label */}
-          <div className="flex flex-col items-center relative order-3 md:order-2 md:col-span-1">
-            {/* Arrow Group - positioned between left and center */}
-            <div className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-[60%] md:-translate-x-full hidden md:block w-12 lg:w-16 xl:w-24 2xl:w-32 z-10">
+          <div className="flex flex-col md:flex-row items-center relative order-3 md:order-2 md:col-span-1">
+            {/* Arrow Group - positioned between left and center, larger size */}
+            <div className="hidden md:block z-10">
               <Image
                 src="/img/arrow_group.svg"
                 alt="Arrows"
-                width={700}
-                height={700}
-                className="w-full h-auto"
+                width={800}
+                height={800}
+                className="w-full h-auto object-contain"
               />
             </div>
             
@@ -115,7 +115,7 @@ const BeforeAfterSection = () => {
           </div>
 
           {/* Right Side - After Stats */}
-          <div className="flex flex-col justify-center gap-4 sm:gap-6 lg:gap-8 items-center md:items-start order-2 md:order-3 md:h-auto">
+          <div className="flex flex-col justify-between max-h-[370px] mt-16 gap-4 sm:gap-6 lg:gap-8 items-center md:items-start order-2 md:order-3 h-full ">
             {/* Dollar Amount */}
             <div className="flex items-baseline gap-1 sm:gap-2">
               <Image
