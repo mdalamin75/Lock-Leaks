@@ -98,8 +98,8 @@ const ProtectionSection = () => {
           <div className="flex gap-5 items-center justify-center flex-wrap">
             <Image src="/img/protection/protection_4.svg" alt="Protection" width={500} height={500} className="w-64 h-96 object-contain" />
             <div className="relative">
-              <Image src="/img/protection/protection_55.svg" alt="Protection" width={500} height={500} className="w-64 h-96 object-contain" />
-              <Image src="/img/protection/protection_52.png" alt="Protection" width={500} height={500} className="w-56 h-auto object-contain absolute bottom-5 left-1/2 -translate-x-1/2" />
+              <Image src="/img/protection/protection_5.svg" alt="Protection" width={500} height={500} className="w-64 h-96 object-contain" />
+              {/* <Image src="/img/protection/protection_52.png" alt="Protection" width={500} height={500} className="w-56 h-auto object-contain absolute bottom-5 left-1/2 -translate-x-1/2" /> */}
             </div>
             <Image src="/img/protection/protection_6.svg" alt="Protection" width={500} height={500} className="w-[40rem] h-[24rem] object-contain" />
           </div>

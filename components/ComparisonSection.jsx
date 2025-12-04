@@ -26,7 +26,7 @@ const ComparisonSection = () => {
       <div className="max-w-4xl mx-auto">
         {/* Title and Subtitle */}
         <div className="text-center mb-8 lg:mb-12">
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-5xl font-bold mb-2 leading-tight font-plus-jakarta">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-5xl font-bold mb-2 leading-tight font-plus-jakarta text-center">
               <span className="bg-clip-text text-transparent" style={{
                 backgroundImage: 'linear-gradient(15deg, rgb(49, 109, 124) 0%, rgb(154, 216, 231) 100%);'
               }}>Lock </span>
@@ -39,7 +39,7 @@ const ComparisonSection = () => {
             </span>
             <span className="text-black"> vs Others</span>
           </h2>
-          <p className="text-base sm:text-lg lg:text-xl text-black font-bold mt-2 italic font-plus-jakarta">
+          <p className="text-base sm:text-lg lg:text-xl text-black font-bold mt-2 italic font-plus-jakarta text-center">
             The Real Difference
           </p>
         </div>
