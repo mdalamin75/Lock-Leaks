@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Hero = () => {
   return (
-    <section className="w-full bg-white flex flex-col items-center justify-center pt-24 pb-12 lg:pt-28 lg:pb-20 px-6 lg:px-8">
+    <section className="w-full bg-white flex flex-col items-center justify-center pt-24 lg:pt-28 px-6 lg:px-8">
       {/* Hero Image */}
       <div className="relative z-10 mb-4 w-full max-w-4xl mx-auto flex flex-col justify-center items-center">
         {/* Hero Background with Arcs and Logos */}
