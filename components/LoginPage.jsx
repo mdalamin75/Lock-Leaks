@@ -7,6 +7,33 @@ import Link from 'next/link';
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [keepLoggedIn, setKeepLoggedIn] = useState(false);
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
+  const testimonials = [
+    {
+      quote: "Floxy has the cleanest IP's unlike other providers, allowing us to scrape data & build account farms. Very reliable infrastructure that businesses can use on a large scale.",
+      name: "Alice",
+      role: "OF Creator"
+    },
+    {
+      quote: "Lock Leaks has transformed how we protect our content. The service is fast, reliable, and gives us peace of mind.",
+      name: "Sarah",
+      role: "Content Creator"
+    },
+    {
+      quote: "Best investment for content protection. The team is responsive and the results speak for themselves.",
+      name: "Emma",
+      role: "Digital Creator"
+    }
+  ];
+
+  const nextTestimonial = () => {
+    setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+  };
+
+  const prevTestimonial = () => {
+    setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
+  };
 
   const gradientStyle = {
     backgroundImage: 'linear-gradient(90deg, rgb(70, 170, 195) 0%, rgb(108, 197, 215) 50%, rgb(138, 210, 227) 100%)'
@@ -15,23 +42,23 @@ const LoginPage = () => {
   return (
     <div className="min-h-screen flex flex-col lg:flex-row">
       {/* Left Panel - Login Form */}
-      <div className="w-full lg:w-1/2 bg-gray-100 flex items-center justify-center p-4 sm:p-6 lg:p-8">
-        <div className="w-full max-w-md">
+      <div className="w-full lg:w-1/2 bg-gray-100 flex flex-col justify-between p-4 sm:p-6 lg:p-8">
+        <div className="w-full max-w-md mx-auto flex-1 flex flex-col justify-center">
           {/* Login Card */}
-          <div className="bg-white rounded-2xl p-6 sm:p-8 lg:p-10 shadow-lg">
+          <div className="bg-white rounded-2xl p-6 sm:px-8 sm:pt-8 sm:pb-4 lg:px-10 lg:pt-10 lg:pb-6 shadow-lg">
             {/* Header */}
-            <div className="mb-8">
-              <h1 className="text-2xl sm:text-3xl font-bold text-black mb-2 font-plus-jakarta">
+            <div className="mb-8 text-center">
+              <h1 className="text-2xl sm:text-2xl font-medium text-black mb-2 font-inter">
                 Login to your account
               </h1>
-              <p className="text-base text-gray-600 font-plus-jakarta">
+              <p className="text-sm font-normal text-[#515151] font-inter">
                 Enter your details to sign in.
               </p>
             </div>
 
             {/* Email Input */}
             <div className="mb-5">
-              <label className="block text-sm font-medium text-gray-700 mb-2 font-plus-jakarta">
+              <label className="block text-sm font-normal text-black mb-2 font-inter">
                 Email Address
               </label>
               <div className="relative">
@@ -43,14 +70,14 @@ const LoginPage = () => {
                 <input
                   type="email"
                   placeholder="name@lockleaks.com"
-                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent font-plus-jakarta"
+                  className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent font-inter"
                 />
               </div>
             </div>
 
             {/* Password Input */}
             <div className="mb-5">
-              <label className="block text-sm font-medium text-gray-700 mb-2 font-plus-jakarta">
+              <label className="block text-sm font-normal text-black mb-2 font-inter">
                 Password
               </label>
               <div className="relative">
@@ -62,7 +89,7 @@ const LoginPage = () => {
                 <input
                   type={showPassword ? 'text' : 'password'}
                   placeholder="********"
-                  className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent font-plus-jakarta"
+                  className="w-full pl-10 pr-12 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent font-inter"
                 />
                 <button
                   onClick={() => setShowPassword(!showPassword)}
@@ -89,11 +116,11 @@ const LoginPage = () => {
                   type="checkbox"
                   checked={keepLoggedIn}
                   onChange={(e) => setKeepLoggedIn(e.target.checked)}
-                  className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+                  className="w-4 h-4 text-blue-600 border-[#D0D0D0] rounded-md focus:ring-blue-500"
                 />
-                <span className="ml-2 text-sm text-gray-700 font-plus-jakarta">Keep me logged in</span>
+                <span className="ml-2 text-sm text-black font-medium font-inter">Keep me logged in</span>
               </label>
-              <Link href="#" className="text-sm text-blue-600 hover:text-blue-700 font-plus-jakarta">
+              <Link href="#" className="text-sm text-[#1FA8CA] hover:text-blue-700 underline font-inter">
                 Forgot password?
               </Link>
             </div>
@@ -104,7 +131,7 @@ const LoginPage = () => {
                 <div className="w-full border-t border-gray-300"></div>
               </div>
               <div className="relative flex justify-center text-sm">
-                <span className="px-4 bg-white text-gray-500 font-plus-jakarta">OR</span>
+                <span className="px-4 bg-white text-gray-500 font-inter">OR</span>
               </div>
             </div>
 
@@ -117,120 +144,170 @@ const LoginPage = () => {
                   <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z"/>
                   <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/>
                 </svg>
-                <span className="text-sm font-medium text-gray-700 font-plus-jakarta">Google</span>
+                {/* <span className="text-sm font-medium text-gray-700 font-inter">Google</span> */}
               </button>
               <button className="flex-1 flex items-center justify-center gap-2 py-3 border border-gray-300 rounded-lg hover:bg-gray-50 transition-colors">
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                 </svg>
-                <span className="text-sm font-medium text-gray-700 font-plus-jakarta">X</span>
+                {/* <span className="text-sm font-medium text-gray-700 font-inter">X</span> */}
               </button>
             </div>
 
             {/* Login Button */}
             <button
-              className="w-full py-3.5 rounded-lg text-white font-bold text-base transition-all hover:shadow-lg hover:scale-105 font-plus-jakarta"
-              style={gradientStyle}
+              className="w-full pt-2 pb-8 rounded-lg text-white font-medium text-base transition-all hover:scale-105 font-inter relative"
+              style={{
+                backgroundImage: 'url(/img/learge_login_bg.svg)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+              }}
             >
-              Log In
+              <span className="text-sm font-medium text-white font-inter">Log In</span>
             </button>
           </div>
 
-          {/* Footer */}
-          <div className="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-            <div className="text-lg font-bold text-black font-plus-jakarta">
-              Lock Leaks
-            </div>
-            <div className="flex items-center gap-3">
-              <span className="text-sm text-gray-600 font-plus-jakarta">Don't have an account?</span>
-              <button className="px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors flex items-center gap-1.5 font-plus-jakarta">
-                <span className="text-sm font-semibold">Start Free</span>
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M12 4v16m8-8H4" />
-                </svg>
-              </button>
-            </div>
+        </div>
+        
+        {/* Footer */}
+        <div className="w-full max-w-xl mx-auto mt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <div className="flex items-center">
+            <Image
+              src="/img/footer_logo_2.png"
+              alt="Lock Leaks"
+              width={200}
+              height={200}
+              className="h-8 sm:h-8 w-auto object-contain"
+            />
+          </div>
+          <div className="flex items-center gap-3">
+            <span className="text-sm text-[#515151] font-medium font-inter">Don't have an account?</span>
+            <button >
+              <Image
+                src="/img/blue_button_2.svg"
+                alt="Sign Up"
+                width={100}
+                height={100}
+                className="w-full h-12 object-contain"
+              />
+              
+            </button>
           </div>
         </div>
       </div>
 
       {/* Right Panel - Content Protection Feature */}
-      <div className="w-full lg:w-1/2 bg-black relative overflow-hidden flex items-center justify-center p-4 sm:p-6 lg:p-8">
-        {/* Background Pattern */}
-        <div className="absolute inset-0 opacity-10">
-          <div className="w-full h-full" style={{
-            backgroundImage: 'repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.05) 10px, rgba(255,255,255,0.05) 20px)'
-          }}></div>
-        </div>
+      <div 
+        className="w-full lg:w-1/2 bg-black relative overflow-hidden flex items-center justify-center p-4 sm:p-6 lg:p-8"
+        style={{
+          backgroundImage: 'url(/img/login_right_bg.svg)',
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
 
         <div className="relative z-10 w-full max-w-lg text-center">
           {/* Title */}
-          <h2 
-            className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 sm:mb-12 font-plus-jakarta"
-            style={{
-              backgroundImage: 'linear-gradient(90deg, rgb(108, 197, 215) 0%, rgb(255, 255, 255) 100%)',
-              WebkitBackgroundClip: 'text',
-              WebkitTextFillColor: 'transparent',
-              backgroundClip: 'text',
-            }}
-          >
-            Protect Your Content
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 sm:mb-12 font-inter">
+            <span 
+              className="bg-clip-text text-transparent"
+              style={{
+                backgroundImage: 'linear-gradient(90deg, rgb(31, 168, 202) 0%, rgb(220, 245, 250) 50%, rgb(31, 168, 202) 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >
+              Protect{' '}
+            </span>
+            <span className="text-[#D0D0D0]">
+              Your{' '}
+            </span>
+            <span 
+              className="bg-clip-text text-transparent"
+              style={{
+                backgroundImage: 'linear-gradient(90deg, rgb(31, 168, 202) 0%, rgb(220, 245, 250) 50%, rgb(31, 168, 202) 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                backgroundClip: 'text',
+              }}
+            >
+              Content
+            </span>
           </h2>
 
-          {/* Central Graphic */}
-          <div className="relative mb-8 sm:mb-12 flex justify-center items-center">
-            <div className="relative">
-              {/* Shadow */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <Image
-                  src="/img/login_right_shadow.svg"
-                  alt="Shadow"
-                  width={400}
-                  height={400}
-                  className="w-full h-auto opacity-50"
-                />
-              </div>
-              {/* Logo Box */}
-              <div className="relative z-10">
-                <Image
-                  src="/img/login_right_logo_box.png"
-                  alt="Content Protection"
-                  width={300}
-                  height={300}
-                  className="w-64 sm:w-80 lg:w-96 h-auto object-contain"
-                />
-              </div>
+          {/* Central Graphic - Centered */}
+          <div className="relative mb-8 sm:mb-12 flex justify-center items-center w-full">
+            {/* Logo Box - Centered */}
+            <div className="relative z-10 flex justify-center items-center w-full">
+              <Image
+                src="/img/login_right_logo_box.png"
+                alt="Content Protection"
+                width={400}
+                height={400}
+                className="w-full max-w-40 sm:max-w-48 lg:max-w-64 h-auto object-contain"
+                priority
+              />
             </div>
           </div>
 
           {/* Testimonial Card */}
-          <div className="bg-gray-800 rounded-xl p-6 sm:p-8 mb-6 sm:mb-8">
-            <p className="text-sm sm:text-base text-gray-300 mb-4 leading-relaxed font-plus-jakarta italic">
-              "Floxy has the cleanest IP's unlike other providers, allowing us to scrape data & build account farms. Very reliable infrastructure that businesses can use on a large scale."
+          <div 
+            className="relative rounded-xl p-6 sm:p-8 mb-6 sm:mb-8 overflow-hidden"
+            style={{
+              backgroundImage: 'url(/img/login_right_shadow.svg)',
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              backgroundRepeat: 'no-repeat',
+            }}
+          >
+            <p className="text-sm sm:text-sm text-left text-[#BCBCBC] mb-4 leading-relaxed font-inter relative z-10">
+              "{testimonials[currentTestimonial].quote}"
             </p>
-            <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-full bg-gray-600"></div>
+            <div className="flex items-center gap-3 relative z-10">
+              <div className="w-10 h-10 rounded-full flex-shrink-0 overflow-hidden">
+                <Image
+                  src="/img/login_profile.svg"
+                  alt="Profile"
+                  width={40}
+                  height={40}
+                  className="w-full h-full object-cover"
+                />
+              </div>
               <div>
-                <div className="text-sm font-semibold text-white font-plus-jakarta">Alice</div>
-                <div className="text-xs text-gray-400 font-plus-jakarta">OF Creator</div>
+                <div className="text-xs font-semibold text-white font-inter text-left">{testimonials[currentTestimonial].name}</div>
+                <div className="text-xs text-[#8F8F8F] font-inter text-left">{testimonials[currentTestimonial].role}</div>
               </div>
             </div>
           </div>
 
           {/* Navigation Controls */}
           <div className="flex items-center justify-center gap-4 mb-6 sm:mb-8">
-            <button className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 transition-colors flex items-center justify-center">
-              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button 
+              onClick={prevTestimonial}
+              className="w-8 h-8 rounded-full bg-white hover:bg-white/90 transition-colors flex items-center justify-center"
+            >
+              <svg className="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
               </svg>
             </button>
             <div className="flex gap-2">
-              <div className="w-2 h-2 rounded-full bg-white"></div>
-              <div className="w-2 h-2 rounded-full bg-white/30"></div>
-              <div className="w-2 h-2 rounded-full bg-white/30"></div>
+              {testimonials.map((_, index) => (
+                <div
+                  key={index}
+                  className={`w-2 h-2 transition-all ${
+                    index === currentTestimonial ? 'bg-white' : 'bg-white/30'
+                  }`}
+                />
+              ))}
             </div>
-            <button className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 transition-colors flex items-center justify-center">
-              <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <button 
+              onClick={nextTestimonial}
+              className="w-8 h-8 rounded-full bg-white hover:bg-white/90 transition-colors flex items-center justify-center"
+            >
+              <svg className="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>
