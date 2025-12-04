@@ -143,23 +143,23 @@ const TrustedSection = () => {
         </div>
 
         {/* Stats Cards */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-24 bg-[#f7f7f7] px-16 py-2 place-content-center rounded-3xl">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 lg:gap-8 xl:gap-24 bg-[#f7f7f7] px-3 sm:px-6 md:px-8 lg:px-12 xl:px-16 py-4 sm:py-6 lg:py-8 rounded-2xl sm:rounded-3xl">
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl p-4 sm:p-6 lg:p-5 shadow-md hover:shadow-lg transition-shadow border-2 border-[#b7e3ee] max-w-56"
+              className="bg-white rounded-lg sm:rounded-xl p-4 sm:p-5 md:p-6 lg:p-5 shadow-md hover:shadow-lg transition-shadow border-2 border-[#b7e3ee] w-full"
             >
               <div className="text-center">
-                <div className="text-3xl sm:text-3xl md:text-3xl lg:text-3xl font-bold text-[#231645] mb-2 font-plus-jakarta flex items-baseline justify-center gap-0.5">
+                <div className="text-2xl sm:text-3xl md:text-4xl lg:text-3xl font-bold text-[#231645] mb-1 sm:mb-2 font-plus-jakarta flex items-baseline justify-center gap-0.5">
                   {stat.prefix && (
                     <span className="text-[#231645]">{stat.prefix}</span>
                   )}
                   <span className="text-[#231645]">{counts[stat.key]}</span>
-                  <span className="text-[#5e527d] text-lg sm:text-lg md:text-lg lg:text-lg font-medium">
+                  <span className="text-[#5e527d] text-base sm:text-lg md:text-xl lg:text-lg font-medium">
                     {stat.suffix}
                   </span>
                 </div>
-                <div className="text-sm sm:text-base lg:text-base text-[#5e527d] font-normal font-plus-jakarta">
+                <div className="text-xs sm:text-sm md:text-base lg:text-base text-[#5e527d] font-normal font-plus-jakarta leading-tight sm:leading-normal">
                   {stat.label}
                 </div>
               </div>

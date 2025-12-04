@@ -130,9 +130,9 @@ const TestimonialSection = () => {
                     height={300}
                     className="w-full h-full object-cover"
                   />
-                  {/* Top 0,8% Text */}
-                  <div className="absolute bottom-7 right-3">
-                    <span className="text-xs sm:text-xs lg:text-xs font-bold text-black font-plus-jakarta">
+                  {/* Top 0,8% Text - Using percentage positioning for consistent placement */}
+                  <div className="absolute bottom-[14%] lg:bottom-[15%] right-[6%]">
+                    <span className="text-[7px] lg:text-xs font-bold text-black font-plus-jakarta drop-shadow-[0_1px_2px_rgba(0,0,0,0.5)]">
                       {currentTestimonial.badge.text}
                     </span>
                   </div>

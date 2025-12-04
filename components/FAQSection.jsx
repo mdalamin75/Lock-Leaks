@@ -90,9 +90,8 @@ const FAQSection = () => {
           {/* Right Section - FAQ List */}
           <div className="space-y-4 sm:space-y-5">
             {faqs.map((faq, index) => (
-              <div className="bg-[#f7f8f9] rounded-2xl p-2 sm:p-2 border border-[#d8d8d8]">
+              <div key={index} className="bg-[#f7f8f9] rounded-2xl p-2 sm:p-2 border border-[#d8d8d8]">
               <div
-                key={index}
                 className="bg-white border border-[#d8d8d8] rounded-2xl p-5 sm:p-6 shadow-sm"
               >
                 <button

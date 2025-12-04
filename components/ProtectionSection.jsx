@@ -90,12 +90,12 @@ const ProtectionSection = () => {
           ))}
         </div> */}
         <div className="flex flex-col gap-5 items-center">
-          <div className="flex gap-5 items-center">
+          <div className="flex gap-5 items-center justify-center flex-wrap">
             <Image src="/img/protection/protection.svg" alt="Protection" width={100} height={100} className="w-96 h-56 object-contain" />
             <Image src="/img/protection/protection_4.svg" alt="Protection" width={100} height={100} className="w-40 h-56 object-contain" />
             <Image src="/img/protection/protection_4.svg" alt="Protection" width={100} height={100} className="w-40 h-56 object-contain" />
           </div>
-          <div className="flex gap-5 items-center">
+          <div className="flex gap-5 items-center justify-center flex-wrap">
             <Image src="/img/protection/protection_4.svg" alt="Protection" width={100} height={100} className="w-40 h-56 object-contain" />
             <Image src="/img/protection/protection_4.svg" alt="Protection" width={100} height={100} className="w-40 h-56 object-contain" />
             <Image src="/img/protection/protection_5.svg" alt="Protection" width={100} height={100} className="w-96 h-56 object-contain" />
