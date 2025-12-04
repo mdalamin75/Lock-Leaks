@@ -23,7 +23,7 @@ const ComparisonSection = () => {
 
   return (
     <section className="w-full bg-white py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-2xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         {/* Title and Subtitle */}
         <div className="text-center mb-8 lg:mb-12">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-5xl font-bold mb-2 leading-tight font-plus-jakarta">
@@ -67,9 +67,9 @@ const ComparisonSection = () => {
                 <Image
                   src={item.rowImage}
                   alt={item.title}
-                  width={500}
-                  height={100}
-                  className="w-full h-auto max-w-xl max-h-10"
+                  width={1000}
+                  height={1000}
+                  className="w-full h-auto max-w-3xl max-h-16"
                 />
               </div>
             </div>

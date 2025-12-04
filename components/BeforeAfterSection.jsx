@@ -119,13 +119,13 @@ const BeforeAfterSection = () => {
             {/* Dollar Amount */}
             <div className="flex items-baseline gap-1 sm:gap-2">
               <Image
-                src="/img/dollar.svg"
+                src="/img/dollar_count.svg"
                 alt="Dollar"
-                width={500}
-                height={500}
-                className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 lg:w-20 lg:h-20 flex-shrink-0"
+                width={1000}
+                height={1000}
+                className="w-10 h-10 sm:w-32 sm:h-12 md:w-40 md:h-16 lg:w-44 lg:h-20 flex-shrink-0"
               />
-              <div className="flex items-baseline">
+              {/* <div className="flex items-baseline">
                 <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-black">
                   0,
                 </span>
@@ -135,21 +135,21 @@ const BeforeAfterSection = () => {
                 <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-black">
                   11
                 </span>
-              </div>
+              </div> */}
             </div>
 
             {/* Views Count */}
             <div className="flex items-center gap-1 sm:gap-2">
               <Image
-                src="/img/eye.svg"
+                src="/img/eye_count.svg"
                 alt="Views"
-                width={500}
-                height={500}
-                className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 lg:w-16 lg:h-16 flex-shrink-0"
+                width={1000}
+                height={1000}
+                className="w-32 h-8 sm:w-32 sm:h-10 md:w-40 md:h-12 lg:w-44 lg:h-16 flex-shrink-0"
               />
-              <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black">
+              {/* <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black">
                 000
-              </span>
+              </span> */}
             </div>
           </div>
         </div>
