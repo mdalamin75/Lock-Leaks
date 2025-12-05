@@ -199,16 +199,15 @@ const LoginPage = () => {
 
       {/* Right Panel - Content Protection Feature */}
       <div 
-        className="w-full lg:w-1/2 bg-black relative overflow-hidden flex items-center justify-center p-4 sm:p-6 lg:p-8"
+        className="w-full lg:w-1/2 min-h-screen bg-black flex items-center justify-center p-4 sm:p-6 lg:p-8"
         style={{
           backgroundImage: 'url(/img/login_right_bg.svg)',
-          backgroundSize: 'cover',
-          backgroundPosition: 'center',
+          backgroundSize: 'contain',
+          backgroundPosition: 'top center',
           backgroundRepeat: 'no-repeat',
         }}
       >
-
-        <div className="relative z-10 w-full max-w-lg text-center">
+        <div className="w-full max-w-lg text-center">
           {/* Title */}
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-8 sm:mb-12 font-inter">
             <span 
