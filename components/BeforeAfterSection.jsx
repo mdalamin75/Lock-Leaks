@@ -104,7 +104,7 @@ const BeforeAfterSection = () => {
               {/* Profile Image */}
               <div className="relative w-full flex justify-center">
                 <Image
-                  src="/img/profile.png"
+                  src="/img/profile.webp"
                   alt="Profile"
                   width={1000}
                   height={1000}

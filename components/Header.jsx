@@ -30,7 +30,7 @@ const Header = () => {
             {/* Logo Image */}
             <div className="w-9 h-9 flex items-center justify-center flex-shrink-0">
               <Image 
-                src="/img/logo_3.png" 
+                src="/img/logo_3.webp" 
                 alt="Logo" 
                 width={500} 
                 height={500} 

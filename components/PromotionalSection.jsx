@@ -54,7 +54,7 @@ const PromotionalSection = () => {
               >
                 {/* Profile Image Container */}
                 <div className="relative">
-                  <Image src="/img/model.png" alt="Profile Image" width={200} height={200} className="w-full h-auto mt-8" />
+                  <Image src="/img/model.webp" alt="Profile Image" width={200} height={200} className="w-full h-auto mt-8" />
                   
                   {/* Stat Badge - positioned at top edge */}
                   <div className="absolute top-0 left-1/2 transform -translate-x-1/2 z-10">
@@ -100,7 +100,7 @@ const PromotionalSection = () => {
               >
                 {/* Profile Image Container */}
                 <div className="relative">
-                  <Image src="/img/model.png" alt="Profile Image" width={200} height={200} className="w-full h-auto mt-8" />
+                  <Image src="/img/model.webp" alt="Profile Image" width={200} height={200} className="w-full h-auto mt-8" />
                   
                   {/* Stat Badge - positioned at top edge */}
                   <div className="absolute top-0 left-1/2 transform -translate-x-1/2 z-10">

@@ -245,7 +245,7 @@ const LoginPage = () => {
             {/* Logo Box - Centered */}
             <div className="relative z-10 flex justify-center items-center w-full">
               <Image
-                src="/img/login_right_logo_box.png"
+                src="/img/login_right_logo_box.webp"
                 alt="Content Protection"
                 width={400}
                 height={400}
