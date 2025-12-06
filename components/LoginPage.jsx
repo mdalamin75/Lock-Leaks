@@ -1,43 +1,45 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+
+// Move testimonials outside component to prevent recreation on each render
+const testimonials = [
+  {
+    quote: "Floxy has the cleanest IP's unlike other providers, allowing us to scrape data & build account farms. Very reliable infrastructure that businesses can use on a large scale.",
+    name: "Alice",
+    role: "OF Creator"
+  },
+  {
+    quote: "Lock Leaks has transformed how we protect our content. The service is fast, reliable, and gives us peace of mind.",
+    name: "Sarah",
+    role: "Content Creator"
+  },
+  {
+    quote: "Best investment for content protection. The team is responsive and the results speak for themselves.",
+    name: "Emma",
+    role: "Digital Creator"
+  }
+];
 
 const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [keepLoggedIn, setKeepLoggedIn] = useState(false);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
-  const testimonials = [
-    {
-      quote: "Floxy has the cleanest IP's unlike other providers, allowing us to scrape data & build account farms. Very reliable infrastructure that businesses can use on a large scale.",
-      name: "Alice",
-      role: "OF Creator"
-    },
-    {
-      quote: "Lock Leaks has transformed how we protect our content. The service is fast, reliable, and gives us peace of mind.",
-      name: "Sarah",
-      role: "Content Creator"
-    },
-    {
-      quote: "Best investment for content protection. The team is responsive and the results speak for themselves.",
-      name: "Emma",
-      role: "Digital Creator"
-    }
-  ];
-
-  const nextTestimonial = () => {
+  const nextTestimonial = useCallback(() => {
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-  };
+  }, []);
 
-  const prevTestimonial = () => {
+  const prevTestimonial = useCallback(() => {
     setCurrentTestimonial((prev) => (prev - 1 + testimonials.length) % testimonials.length);
-  };
+  }, []);
 
-  const gradientStyle = {
+  // Memoize gradient style to prevent recreation
+  const gradientStyle = useMemo(() => ({
     backgroundImage: 'linear-gradient(90deg, rgb(70, 170, 195) 0%, rgb(108, 197, 215) 50%, rgb(138, 210, 227) 100%)'
-  };
+  }), []);
 
   return (
     <div className="min-h-screen flex flex-col lg:flex-row">
@@ -205,6 +207,7 @@ const LoginPage = () => {
           backgroundSize: 'contain',
           backgroundPosition: 'top center',
           backgroundRepeat: 'no-repeat',
+          willChange: 'auto', // Optimize rendering performance
         }}
       >
         <div className="w-full max-w-lg text-center">
