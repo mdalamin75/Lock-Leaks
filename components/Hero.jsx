@@ -1,21 +1,42 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 const Hero = () => {
+  const [isIOS, setIsIOS] = useState(false);
+
+  useEffect(() => {
+    if (typeof navigator !== "undefined") {
+      const ios = /iPad|iPhone|iPod/.test(navigator.userAgent);
+      setIsIOS(ios);
+    }
+  }, []);
+
   return (
     <section className="w-full bg-white flex flex-col items-center justify-center pt-24 lg:pt-28 px-6 lg:px-8">
 
-      {/* Hero Image (fixed for Safari iOS) */}
+      {/* Hero Image – iOS = WEBP, Android/Desktop = SVG */}
       <div className="relative z-10 mb-4 w-full max-w-4xl mx-auto flex flex-col justify-center items-center">
+
         <div className="w-full max-w-[520px]">
-          <img
-            src="/img/test.webp"
-            alt="Hero Background"
-            className="w-full h-auto block"
-            draggable="false"
-          />
+          {/* iOS image */}
+          {isIOS ? (
+            <img
+              src="/img/test.webp"
+              alt="Hero Background iOS"
+              className="w-full h-auto block"
+              draggable="false"
+            />
+          ) : (
+            <img
+              src="/img/hero_3.svg"
+              alt="Hero Background"
+              className="w-full h-auto block"
+              draggable="false"
+            />
+          )}
         </div>
+
       </div>
 
       {/* Monitoring and Takedown Service Button */}
@@ -39,7 +60,6 @@ const Hero = () => {
       {/* Main Content */}
       <div className="text-center max-w-5xl mx-auto px-4 font-plus-jakarta">
 
-        {/* Headline */}
         <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-2 leading-[1.1]">
           <span
             className="bg-clip-text text-transparent"
@@ -72,15 +92,13 @@ const Hero = () => {
           </span>
         </h1>
 
-        {/* Description */}
         <p className="text-lg lg:text-xl text-black mb-4 lg:mb-5 max-w-xl mx-auto leading-relaxed italic font-bold">
           We scan the web for stolen photos & videos and remove them fast. Your first leak check is 100% free.
         </p>
 
-        {/* CTA Button + Made by a Woman */}
+        {/* CTA & Made By A Woman */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
 
-          {/* Get Started Button */}
           <button className="relative w-40 h-12">
             <Image
               src="/img/get_started.svg"
@@ -91,7 +109,6 @@ const Hero = () => {
             />
           </button>
 
-          {/* Made by a Woman */}
           <div className="flex items-center gap-2">
             <div className="relative w-9 h-9">
               <Image
