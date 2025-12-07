@@ -34,6 +34,8 @@ const Header = () => {
                 alt="Logo" 
                 width={500} 
                 height={500} 
+                quality={100}
+                sizes="(max-width: 768px) 96px, 96px"
                 className="w-24 h-24 object-contain"
               />
             </div>
@@ -53,23 +55,31 @@ const Header = () => {
             <div className="hidden md:flex items-center gap-2.5">
               {/* Log in Button - White background, dark text, light purple border, pill shape, subtle shadow */}
               <Link href="/login" className="hover:opacity-80 transition-opacity">
-                <Image 
+                <img 
                   src="/img/login_button.svg" 
                   alt="Login" 
-                  width={14} 
-                  height={14} 
                   className="w-full h-8 object-contain"
+                  style={{ 
+                    imageRendering: '-webkit-optimize-contrast',
+                    WebkitBackfaceVisibility: 'hidden',
+                    backfaceVisibility: 'hidden',
+                    transform: 'translateZ(0)',
+                  }}
                 />
               </Link>
               
               {/* Start Free Button - Blue gradient (lighter top-left to deeper bottom-right), white text, star icon, prominent shadow */}
               <button className="mt-1">
-                <Image 
+                <img 
                   src="/img/blue_button_2.svg" 
                   alt="Start Free" 
-                  width={14} 
-                  height={14} 
                   className="w-full h-9 object-contain"
+                  style={{ 
+                    imageRendering: '-webkit-optimize-contrast',
+                    WebkitBackfaceVisibility: 'hidden',
+                    backfaceVisibility: 'hidden',
+                    transform: 'translateZ(0)',
+                  }}
                 />
               </button>
             </div>
@@ -165,12 +175,16 @@ const Header = () => {
                     onClick={closeMenu}
                     className="hover:opacity-80 transition-opacity flex justify-center"
                   >
-                    <Image
+                    <img
                       src="/img/login_button.svg"
                       alt="Login"
-                      width={14}
-                      height={14}
                       className="w-full h-10 object-contain"
+                      style={{ 
+                        imageRendering: '-webkit-optimize-contrast',
+                        WebkitBackfaceVisibility: 'hidden',
+                        backfaceVisibility: 'hidden',
+                        transform: 'translateZ(0)',
+                      }}
                     />
                   </Link>
                   
@@ -178,12 +192,16 @@ const Header = () => {
                     onClick={closeMenu}
                     className="flex justify-center"
                   >
-                    <Image
+                    <img
                       src="/img/blue_button_2.svg"
                       alt="Start Free"
-                      width={14}
-                      height={14}
                       className="w-full h-11 object-contain"
+                      style={{ 
+                        imageRendering: '-webkit-optimize-contrast',
+                        WebkitBackfaceVisibility: 'hidden',
+                        backfaceVisibility: 'hidden',
+                        transform: 'translateZ(0)',
+                      }}
                     />
                   </button>
                 </div>

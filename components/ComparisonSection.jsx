@@ -48,11 +48,11 @@ const ComparisonSection = () => {
         <div className="flex justify-end mb-6 lg:mb-8">
           <div className="flex items-center gap-4 sm:gap-6">
             <div className="flex items-center gap-2">
-              <Image src="/img/black_dot.svg" alt="Black Dot" width={20} height={20} className="w-4 h-3 object-contain" />
+              <img src="/img/black_dot.svg" alt="Black Dot" className="w-4 h-3 object-contain" style={{ imageRendering: '-webkit-optimize-contrast', WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }} />
               <span className="text-xs sm:text-sm text-black">With others.</span>
             </div>
             <div className="flex items-center gap-2">
-              <Image src="/img/blue_dot.svg" alt="Blue Dot" width={20} height={20} className="w-4 h-3 object-contain" />
+              <img src="/img/blue_dot.svg" alt="Blue Dot" className="w-4 h-3 object-contain" style={{ imageRendering: '-webkit-optimize-contrast', WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }} />
               <span className="text-xs sm:text-sm text-black">With Lock Leaks.</span>
             </div>
           </div>
@@ -64,12 +64,16 @@ const ComparisonSection = () => {
             <div key={index} className="flex flex-col sm:flex-row items-start sm:items-center gap-1 mt-0">
               {/* Row Image - Bar Chart */}
               <div className="flex-1 w-full sm:w-auto">
-                <Image
+                <img
                   src={item.rowImage}
                   alt={item.title}
-                  width={1000}
-                  height={1000}
                   className="w-full h-auto max-w-3xl max-h-16"
+                  style={{ 
+                    imageRendering: '-webkit-optimize-contrast',
+                    WebkitBackfaceVisibility: 'hidden',
+                    backfaceVisibility: 'hidden',
+                    transform: 'translateZ(0)',
+                  }}
                 />
               </div>
             </div>
@@ -79,12 +83,16 @@ const ComparisonSection = () => {
         {/* Call to Action Button */}
         <div className="flex justify-center items-center">
           <button className="transition-transform hover:scale-105 active:scale-95">
-            <Image
+            <img
               src="/img/start_free_scan.svg"
               alt="Start Free Scan"
-              width={300}
-              height={80}
               className="w-36 sm:w-40 lg:w-40 h-auto"
+              style={{ 
+                imageRendering: '-webkit-optimize-contrast',
+                WebkitBackfaceVisibility: 'hidden',
+                backfaceVisibility: 'hidden',
+                transform: 'translateZ(0)',
+              }}
             />
           </button>
         </div>

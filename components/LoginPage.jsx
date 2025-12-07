@@ -180,18 +180,24 @@ const LoginPage = () => {
               alt="Lock Leaks"
               width={200}
               height={200}
+              quality={100}
+              sizes="(max-width: 640px) 100px, 200px"
               className="h-8 sm:h-8 w-auto object-contain"
             />
           </div>
           <div className="flex items-center gap-3">
             <span className="text-sm text-[#515151] font-medium font-inter">Don't have an account?</span>
             <button >
-              <Image
+              <img
                 src="/img/blue_button_2.svg"
                 alt="Sign Up"
-                width={100}
-                height={100}
                 className="w-full h-12 object-contain"
+                style={{ 
+                  imageRendering: '-webkit-optimize-contrast',
+                  WebkitBackfaceVisibility: 'hidden',
+                  backfaceVisibility: 'hidden',
+                  transform: 'translateZ(0)',
+                }}
               />
               
             </button>
@@ -208,6 +214,12 @@ const LoginPage = () => {
           backgroundPosition: 'top center',
           backgroundRepeat: 'no-repeat',
           willChange: 'auto', // Optimize rendering performance
+          WebkitBackfaceVisibility: 'hidden', // Fix Safari rendering
+          WebkitFontSmoothing: 'antialiased', // Better text rendering
+          backfaceVisibility: 'hidden', // Cross-browser support
+          transform: 'translateZ(0)', // Force hardware acceleration
+          imageRendering: '-webkit-optimize-contrast', // High quality for Safari
+          WebkitOptimizeContrast: 'auto', // Safari specific
         }}
       >
         <div className="w-full max-w-lg text-center">
@@ -249,8 +261,12 @@ const LoginPage = () => {
                 alt="Content Protection"
                 width={400}
                 height={400}
+                quality={100}
+                unoptimized={false}
+                sizes="(max-width: 640px) 160px, (max-width: 1024px) 192px, 256px"
                 className="w-full max-w-40 sm:max-w-48 lg:max-w-64 h-auto object-contain"
                 priority
+                style={{ imageRendering: 'auto' }}
               />
             </div>
           </div>
@@ -275,7 +291,10 @@ const LoginPage = () => {
                   alt="Profile"
                   width={40}
                   height={40}
+                  quality={100}
+                  unoptimized={true}
                   className="w-full h-full object-cover"
+                  style={{ imageRendering: '-webkit-optimize-contrast' }}
                 />
               </div>
               <div>
@@ -322,7 +341,11 @@ const LoginPage = () => {
               alt="Trustpilot"
               width={120}
               height={40}
+              quality={100}
+              unoptimized={true}
+              sizes="(max-width: 640px) 96px, 120px"
               className="h-8 sm:h-10 w-auto object-contain"
+              style={{ imageRendering: '-webkit-optimize-contrast' }}
             />
           </div>
         </div>

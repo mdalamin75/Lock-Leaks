@@ -132,12 +132,16 @@ const TrustedSection = () => {
         {/* Trusted Image */}
         <div className="flex justify-center mb-8 sm:mb-8 lg:mb-8">
           <div className="w-full max-w-7xl lg:max-w-7xl">
-            <Image
+            <img
               src="/img/trusted.svg"
               alt="Trusted DMCA Service"
-              width={1200}
-              height={800}
               className="w-full h-auto object-contain"
+              style={{ 
+                imageRendering: '-webkit-optimize-contrast',
+                WebkitBackfaceVisibility: 'hidden',
+                backfaceVisibility: 'hidden',
+                transform: 'translateZ(0)',
+              }}
             />
           </div>
         </div>

@@ -37,6 +37,9 @@ const PromotionalSection = () => {
                 alt={platform.name}
                 width={120}
                 height={40}
+                quality={100}
+                unoptimized={true}
+                sizes="(max-width: 640px) 80px, (max-width: 768px) 96px, (max-width: 1024px) 112px, 128px"
                 className="w-20 h-8 sm:w-24 sm:h-10 md:w-28 md:h-12 lg:w-32 lg:h-12 object-contain opacity-90 hover:opacity-100 transition-opacity"
               />
             </div>
@@ -54,16 +57,16 @@ const PromotionalSection = () => {
               >
                 {/* Profile Image Container */}
                 <div className="relative">
-                  <Image src="/img/model.webp" alt="Profile Image" width={200} height={200} className="w-full h-auto mt-8" />
+                  <Image src="/img/model.webp" alt="Profile Image" width={200} height={200} quality={100} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 208px" className="w-full h-auto mt-5 md:mt-8" />
                   
                   {/* Stat Badge - positioned at top edge */}
                   <div className="absolute top-0 left-1/2 transform -translate-x-1/2 z-10">
-                    <Image 
+                    {/* Use regular img tag for SVG files to avoid Next.js optimization issues */}
+                    <img 
                       src={stat.image} 
                       alt={stat.icon} 
-                      width={200} 
-                      height={200} 
                       className="w-20 h-9 object-contain"
+                      style={{ width: 'auto', height: 'auto' }}
                     />
                   </div>
                 </div>
@@ -85,7 +88,7 @@ const PromotionalSection = () => {
             <span className="text-sm sm:text-base lg:text-lg text-black font-medium">Top Rated</span>
             <div className="flex gap-0.5 sm:gap-1">
               {[...Array(5)].map((_, index) => (
-                <Image key={index} src="/img/pink_star.svg" alt="Star" width={14} height={14} className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" />
+                <img key={index} src="/img/pink_star.svg" alt="Star" className="w-4 h-4 sm:w-5 sm:h-5 lg:w-6 lg:h-6" style={{ imageRendering: '-webkit-optimize-contrast', WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }} />
               ))}
             </div>
           </div>
@@ -100,16 +103,16 @@ const PromotionalSection = () => {
               >
                 {/* Profile Image Container */}
                 <div className="relative">
-                  <Image src="/img/model.webp" alt="Profile Image" width={200} height={200} className="w-full h-auto mt-8" />
+                  <Image src="/img/model.webp" alt="Profile Image" width={200} height={200} quality={100} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 208px" className="w-full h-auto mt-6 md:mt-8" />
                   
                   {/* Stat Badge - positioned at top edge */}
                   <div className="absolute top-0 left-1/2 transform -translate-x-1/2 z-10">
-                    <Image 
+                    {/* Use regular img tag for SVG files to avoid Next.js optimization issues */}
+                    <img 
                       src={stat.image} 
                       alt={stat.icon} 
-                      width={200} 
-                      height={200} 
-                      className="w-20 h-9 "
+                      className="w-20 h-9 object-contain"
+                      style={{ width: 'auto', height: 'auto' }}
                     />
                   </div>
                 </div>

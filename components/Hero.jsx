@@ -8,13 +8,18 @@ const Hero = () => {
       <div className="relative z-10 mb-4 w-full max-w-4xl mx-auto flex flex-col justify-center items-center">
         {/* Hero Background with Arcs and Logos */}
         <div className="relative w-full flex justify-center items-center">
-          <Image 
+          {/* Use regular img tag for SVG to ensure crisp quality on all devices */}
+          <img 
             src="/img/hero_3.svg" 
             alt="Hero Background" 
-            width={1000} 
-            height={1000} 
             className="w-full max-w-[500px] h-auto object-contain"
-            priority
+            style={{ 
+              imageRendering: '-webkit-optimize-contrast',
+              WebkitBackfaceVisibility: 'hidden',
+              backfaceVisibility: 'hidden',
+              transform: 'translateZ(0)',
+            }}
+            loading="eager"
           />
         </div>
       </div>
@@ -22,12 +27,16 @@ const Hero = () => {
       {/* Monitoring and Takedown Service Button */}
       <div className=" mb-8 lg:mb-12">
         <button className="relative px-6 py-2 rounded-full flex items-center shadow hover:shadow-md transition-all overflow-hidden min-w-[293px]">
-          <Image 
+          <img 
             src="/img/service_button_bg.svg" 
             alt="Service Button Background" 
-            width={293} 
-            height={35} 
-            className="absolute inset-0 w-full h-full object-cover" 
+            className="absolute inset-0 w-full h-full object-cover"
+            style={{ 
+              imageRendering: '-webkit-optimize-contrast',
+              WebkitBackfaceVisibility: 'hidden',
+              backfaceVisibility: 'hidden',
+              transform: 'translateZ(0)',
+            }}
           />
           <span className="relative z-10 text-[#1FA8CA] font-regular text-sm whitespace-nowrap ml-14">
             Monitoring and Takedown Service
@@ -66,16 +75,20 @@ const Hero = () => {
         {/* CTA Button and Made by a Woman */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 lg:gap-4">
           <button>
-            <Image src="/img/get_started.svg" alt="Get Started Free" width={500} height={500} className="w-40 h-12 object-contain" />
+            <img src="/img/get_started.svg" alt="Get Started Free" className="w-40 h-12 object-contain" style={{ imageRendering: '-webkit-optimize-contrast', WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }} />
           </button>
           
           <div className="flex items-center gap-2">
-              <Image 
+              <img 
                 src="/img/love.svg" 
                 alt="Love" 
-                width={14} 
-                height={14} 
                 className="w-9 h-9"
+                style={{ 
+                  imageRendering: '-webkit-optimize-contrast',
+                  WebkitBackfaceVisibility: 'hidden',
+                  backfaceVisibility: 'hidden',
+                  transform: 'translateZ(0)',
+                }}
               />
             <span className="text-black font-bold text-sm lg:text-base font-plus-jakarta">Made by a Woman</span>
           </div>

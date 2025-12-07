@@ -65,12 +65,16 @@ const BeforeAfterSection = () => {
                 className="flex items-center justify-between gap-2 sm:gap-3 bg-white shadow rounded-full px-3 sm:px-4 py-1 w-full max-w-xs sm:max-w-sm md:max-w-56"
               >
                 <div className="flex-shrink-0">
-                  <Image
+                  <img
                     src={item.icon}
                     alt={item.text}
-                    width={100}
-                    height={100}
                     className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7"
+                    style={{ 
+                      imageRendering: '-webkit-optimize-contrast',
+                      WebkitBackfaceVisibility: 'hidden',
+                      backfaceVisibility: 'hidden',
+                      transform: 'translateZ(0)',
+                    }}
                   />
                 </div>
                 <span className="text-xs sm:text-sm font-medium text-black whitespace-nowrap">
@@ -84,12 +88,16 @@ const BeforeAfterSection = () => {
           <div className="flex flex-col md:flex-row items-center relative order-3 md:order-2 md:col-span-1">
             {/* Arrow Group - positioned between left and center, larger size */}
             <div className="hidden md:block z-10">
-              <Image
+              <img
                 src="/img/arrow_group.svg"
                 alt="Arrows"
-                width={800}
-                height={800}
                 className="w-full h-auto object-contain"
+                style={{ 
+                  imageRendering: '-webkit-optimize-contrast',
+                  WebkitBackfaceVisibility: 'hidden',
+                  backfaceVisibility: 'hidden',
+                  transform: 'translateZ(0)',
+                }}
               />
             </div>
             
@@ -108,6 +116,8 @@ const BeforeAfterSection = () => {
                   alt="Profile"
                   width={1000}
                   height={1000}
+                  quality={100}
+                  sizes="(max-width: 640px) 280px, (max-width: 768px) 384px, (max-width: 1024px) 448px, (max-width: 1280px) 512px, 768px"
                   className="w-full max-w-[280px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl h-auto rounded-xl sm:rounded-2xl"
                 />
               </div>
@@ -115,15 +125,19 @@ const BeforeAfterSection = () => {
           </div>
 
           {/* Right Side - After Stats */}
-          <div className="flex flex-col justify-between max-h-[370px] mt-16 gap-4 sm:gap-6 lg:gap-8 items-center md:items-start order-2 md:order-3 h-full ">
+          <div className="flex flex-col justify-between max-h-[370px] mb-16 md:mb-0 mt-16 gap-4 sm:gap-6 lg:gap-8 items-center md:items-start order-2 md:order-3 h-full ">
             {/* Dollar Amount */}
             <div className="flex items-baseline gap-1 sm:gap-2">
-              <Image
+              <img
                 src="/img/dollar_count.svg"
                 alt="Dollar"
-                width={1000}
-                height={1000}
                 className="w-10 h-10 sm:w-32 sm:h-12 md:w-40 md:h-16 lg:w-44 lg:h-20 flex-shrink-0"
+                style={{ 
+                  imageRendering: '-webkit-optimize-contrast',
+                  WebkitBackfaceVisibility: 'hidden',
+                  backfaceVisibility: 'hidden',
+                  transform: 'translateZ(0)',
+                }}
               />
               {/* <div className="flex items-baseline">
                 <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-black">
@@ -140,12 +154,16 @@ const BeforeAfterSection = () => {
 
             {/* Views Count */}
             <div className="flex items-center gap-1 sm:gap-2">
-              <Image
+              <img
                 src="/img/eye_count.svg"
                 alt="Views"
-                width={1000}
-                height={1000}
                 className="w-32 h-8 sm:w-32 sm:h-10 md:w-40 md:h-12 lg:w-44 lg:h-16 flex-shrink-0"
+                style={{ 
+                  imageRendering: '-webkit-optimize-contrast',
+                  WebkitBackfaceVisibility: 'hidden',
+                  backfaceVisibility: 'hidden',
+                  transform: 'translateZ(0)',
+                }}
               />
               {/* <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black">
                 000
@@ -157,12 +175,16 @@ const BeforeAfterSection = () => {
         {/* Get Started Free Button */}
         <div className="flex justify-center items-center mt-8 sm:mt-12 lg:mt-16">
           <button className="hover:opacity-90 transition-opacity">
-            <Image 
+            <img 
               src="/img/get_started.svg" 
               alt="Get Started Free" 
-              width={500} 
-              height={500} 
-              className="w-32 h-10 sm:w-40 sm:h-12 md:w-44 md:h-14 object-contain" 
+              className="w-32 h-10 sm:w-40 sm:h-12 md:w-44 md:h-14 object-contain"
+              style={{ 
+                imageRendering: '-webkit-optimize-contrast',
+                WebkitBackfaceVisibility: 'hidden',
+                backfaceVisibility: 'hidden',
+                transform: 'translateZ(0)',
+              }}
             />
           </button>
         </div>

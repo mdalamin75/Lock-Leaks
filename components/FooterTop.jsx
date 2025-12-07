@@ -7,6 +7,9 @@ const FooterTop = () => {
       className="w-full max-w-7xl mx-auto relative overflow-hidden bg-cover bg-center bg-no-repeat rounded-2xl"
       style={{
         backgroundImage: 'url(/img/footer_top_bg.svg)',
+        WebkitBackfaceVisibility: 'hidden',
+        backfaceVisibility: 'hidden',
+        transform: 'translateZ(0)',
       }}
     >
       {/* Gradient Overlay for better text readability */}
@@ -29,12 +32,16 @@ const FooterTop = () => {
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 mb-6">
             {/* Profile Group */}
             <div className="flex items-center">
-              <Image
+              <img
                 src="/img/profile_group.svg"
                 alt="User Profiles"
-                width={60}
-                height={60}
                 className="w-12 h-auto"
+                style={{ 
+                  imageRendering: '-webkit-optimize-contrast',
+                  WebkitBackfaceVisibility: 'hidden',
+                  backfaceVisibility: 'hidden',
+                  transform: 'translateZ(0)',
+                }}
               />
             </div>
 
@@ -49,13 +56,17 @@ const FooterTop = () => {
             {/* Star Rating */}
             <div className="flex items-center">
               {[...Array(5)].map((_, index) => (
-                <Image
+                <img
                   key={index}
                   src="/img/star_gold.svg"
                   alt="Star"
-                  width={20}
-                  height={20}
                   className="w-4 h-4"
+                  style={{ 
+                    imageRendering: '-webkit-optimize-contrast',
+                    WebkitBackfaceVisibility: 'hidden',
+                    backfaceVisibility: 'hidden',
+                    transform: 'translateZ(0)',
+                  }}
                 />
               ))}
             </div>
@@ -69,12 +80,16 @@ const FooterTop = () => {
           {/* CTA Button */}
           <div className="flex justify-center">
             <button className="hover:opacity-90 transition-opacity">
-              <Image
+              <img
                 src="/img/start_free_scan.svg"
                 alt="Start Free Scan"
-                width={200}
-                height={100}
                 className="w-48 h-10 object-contain"
+                style={{ 
+                  imageRendering: '-webkit-optimize-contrast',
+                  WebkitBackfaceVisibility: 'hidden',
+                  backfaceVisibility: 'hidden',
+                  transform: 'translateZ(0)',
+                }}
               />
             </button>
           </div>

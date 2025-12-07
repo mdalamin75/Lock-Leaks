@@ -62,13 +62,16 @@ const AutomaticScanSection = () => {
                 className={`flex items-center justify-center flex-shrink-0 ${item.marginClasses}`}
               >
                 <div className="relative group flex items-center justify-center">
-                  <Image
+                  <img
                     src={item.icon}
                     alt={item.name}
-                    width={100}
-                    height={100}
                     className={`${item.widthHeight} object-contain opacity-100 group-hover:opacity-100 transition-opacity`}
-                    quality={100}
+                    style={{ 
+                      imageRendering: '-webkit-optimize-contrast',
+                      WebkitBackfaceVisibility: 'hidden',
+                      backfaceVisibility: 'hidden',
+                      transform: 'translateZ(0)',
+                    }}
                   />
                 </div>
               </div>

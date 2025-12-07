@@ -91,29 +91,33 @@ const ProtectionSection = () => {
         </div> */}
         <div className="flex flex-col gap-5 items-center">
           <div className="flex gap-5 items-center justify-center flex-wrap">
-            <Image src="/img/protection/protection11.svg" alt="Protection" width={500} height={500} className="w-[40rem] h-[24rem] object-contain" />
-            <Image src="/img/protection/protection_22.svg" alt="Protection" width={500} height={500} className="w-64 h-96 object-contain" />
-            <Image src="/img/protection/protection_33.svg" alt="Protection" width={500} height={500} className="w-64 h-96 object-contain" />
+            <img src="/img/protection/protection11.svg" alt="Protection" className="w-[40rem] h-[24rem] object-contain" style={{ imageRendering: '-webkit-optimize-contrast', WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }} />
+            <img src="/img/protection/protection_22.svg" alt="Protection" className="w-64 h-96 object-contain" style={{ imageRendering: '-webkit-optimize-contrast', WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }} />
+            <img src="/img/protection/protection_33.svg" alt="Protection" className="w-64 h-96 object-contain" style={{ imageRendering: '-webkit-optimize-contrast', WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }} />
           </div>
           <div className="flex gap-5 items-center justify-center flex-wrap">
-            <Image src="/img/protection/protection_4.svg" alt="Protection" width={500} height={500} className="w-64 h-96 object-contain" />
+            <img src="/img/protection/protection_4.svg" alt="Protection" className="w-64 h-96 object-contain" style={{ imageRendering: '-webkit-optimize-contrast', WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }} />
             <div className="relative">
-              <Image src="/img/protection/protection_5.svg" alt="Protection" width={500} height={500} className="w-64 h-96 object-contain" />
+              <img src="/img/protection/protection_5.svg" alt="Protection" className="w-64 h-96 object-contain" style={{ imageRendering: '-webkit-optimize-contrast', WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }} />
               {/* <Image src="/img/protection/protection_52.png" alt="Protection" width={500} height={500} className="w-56 h-auto object-contain absolute bottom-5 left-1/2 -translate-x-1/2" /> */}
             </div>
-            <Image src="/img/protection/protection_6.svg" alt="Protection" width={500} height={500} className="w-[40rem] h-[24rem] object-contain" />
+            <img src="/img/protection/protection_6.svg" alt="Protection" className="w-[40rem] h-[24rem] object-contain" style={{ imageRendering: '-webkit-optimize-contrast', WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }} />
           </div>
         </div>
 
         {/* CTA Button */}
         <div className="flex justify-center">
           <button className="hover:opacity-90 transition-opacity">
-            <Image
+            <img
               src="/img/get_started.svg"
               alt="Get Started Free"
-              width={200}
-              height={100}
               className="w-36 sm:w-36 h-auto object-contain mt-10"
+              style={{ 
+                imageRendering: '-webkit-optimize-contrast',
+                WebkitBackfaceVisibility: 'hidden',
+                backfaceVisibility: 'hidden',
+                transform: 'translateZ(0)',
+              }}
             />
           </button>
         </div>

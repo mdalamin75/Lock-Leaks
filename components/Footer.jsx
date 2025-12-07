@@ -10,19 +10,23 @@ const Footer = () => {
           {/* Left Section - Brand */}
           <div className="space-y-4">
             {/* <h2 className="text-2xl lg:text-3xl font-bold text-[#1E3A5F]">Lock Leaks</h2> */}
-            <Image src="/img/footer_logo_2.webp" alt="Lock Leaks" width={500} height={500} className="w-48 h-auto object-contain" />
+            <Image src="/img/footer_logo_2.webp" alt="Lock Leaks" width={500} height={500} quality={100} sizes="(max-width: 768px) 192px, 192px" className="w-48 h-auto object-contain" />
             <p className="text-sm lg:text-base font-medium leading-none text-[#1a1a1a]">
               Grow your revenue while we protect your content.
             </p>
             
             {/* Made by a Woman */}
             <div className="flex items-center gap-2">
-              <Image 
-                src="/img/love.svg" 
+              <img 
+                src="/img/love.svg"
                 alt="Love" 
-                width={20} 
-                height={20} 
                 className="w-5 h-5"
+                style={{ 
+                  imageRendering: '-webkit-optimize-contrast',
+                  WebkitBackfaceVisibility: 'hidden',
+                  backfaceVisibility: 'hidden',
+                  transform: 'translateZ(0)',
+                }}
               />
               <span className="text-[#1a1a1a] font-semibold text-sm">Made by a Woman</span>
             </div>
@@ -67,7 +71,7 @@ const Footer = () => {
 
             {/* All services are online */}
             <div className="flex items-center gap-1 pt-2">
-              <Image src="/img/green_right.svg" alt="Green right" width={50} height={50} className="w-5 h-4" />
+              <img src="/img/green_right.svg" alt="Green right" className="w-5 h-4" style={{ imageRendering: '-webkit-optimize-contrast', WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }} />
               <span className="text-xs text-[#1a1a1a]">All services are online</span>
             </div>
           </div>
@@ -130,7 +134,7 @@ const Footer = () => {
             <p>© 2025 LockLeaks. All rights reserved.</p>
             {/* <span className="hidden md:inline">•</span> */}
             <p className="flex items-center gap-1 font-semibold">
-              Part of FaNetwork <Image src="/img/flag.svg" alt="Flag" width={14} height={14} className="w-4 h-4 mt-1.5" />
+              Part of FaNetwork <img src="/img/flag.svg" alt="Flag" className="w-4 h-4 mt-1.5" style={{ imageRendering: '-webkit-optimize-contrast', WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }} />
             </p>
           </div>
         </div>

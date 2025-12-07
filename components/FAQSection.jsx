@@ -67,7 +67,7 @@ const FAQSection = () => {
             <div className="mt-auto">
               {/* Profile Icons */}
               <div className="flex items-center gap-3">
-                <Image src="/img/profile_group.svg" alt="Profile" width={500} height={500} className="w-24 h-16 object-contain" />
+                <img src="/img/profile_group.svg" alt="Profile" className="w-24 h-16 object-contain" style={{ imageRendering: '-webkit-optimize-contrast', WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }} />
               </div>
 
               {/* Heading */}
@@ -82,7 +82,7 @@ const FAQSection = () => {
 
               {/* Contact Support Button */}
               <button className="transition-transform hover:scale-105">
-                <Image src="/img/contact_support.svg" alt="Contact Support" width={500} height={500} className="w-48 h-16 object-contain" />
+                <img src="/img/contact_support.svg" alt="Contact Support" className="w-48 h-16 object-contain" style={{ imageRendering: '-webkit-optimize-contrast', WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }} />
               </button>
             </div>
           </div>
@@ -101,20 +101,28 @@ const FAQSection = () => {
                   {/* Icon - Just the arrow image */}
                   <div className="flex-shrink-0">
                     {openIndex === index ? (
-                      <Image
+                      <img
                         src="/img/arrow_down.svg"
                         alt="Down arrow"
-                        width={48}
-                        height={48}
                         className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
+                        style={{ 
+                          imageRendering: '-webkit-optimize-contrast',
+                          WebkitBackfaceVisibility: 'hidden',
+                          backfaceVisibility: 'hidden',
+                          transform: 'translateZ(0)',
+                        }}
                       />
                     ) : (
-                      <Image
+                      <img
                         src="/img/arrow_right.svg"
                         alt="Right arrow"
-                        width={48}
-                        height={48}
                         className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
+                        style={{ 
+                          imageRendering: '-webkit-optimize-contrast',
+                          WebkitBackfaceVisibility: 'hidden',
+                          backfaceVisibility: 'hidden',
+                          transform: 'translateZ(0)',
+                        }}
                       />
                     )}
                   </div>

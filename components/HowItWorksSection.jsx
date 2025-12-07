@@ -83,12 +83,18 @@ const HowItWorksSection = () => {
               <div className="flex-1">
                 {/* Badge */}
                 <div className="mb-2">
-                  <Image
+                  <img
                     src={step.badgeImage}
                     alt={step.badge}
-                    width={150}
-                    height={100}
                     className="h-8 sm:h-10 lg:h-10 w-auto object-contain"
+                    style={{ 
+                      width: 'auto',
+                      height: 'auto',
+                      imageRendering: '-webkit-optimize-contrast',
+                      WebkitBackfaceVisibility: 'hidden',
+                      backfaceVisibility: 'hidden',
+                      transform: 'translateZ(0)',
+                    }}
                   />
                 </div>
 
@@ -104,12 +110,18 @@ const HowItWorksSection = () => {
 
                 {/* Button */}
                 <button className="group transition-all hover:scale-105 hover:opacity-90">
-                  <Image
+                  <img
                     src={step.buttonImage}
                     alt={step.buttonText}
-                    width={200}
-                    height={100}
                     className="h-12 sm:h-12 lg:h-12 w-auto object-contain"
+                    style={{ 
+                      width: 'auto',
+                      height: 'auto',
+                      imageRendering: '-webkit-optimize-contrast',
+                      WebkitBackfaceVisibility: 'hidden',
+                      backfaceVisibility: 'hidden',
+                      transform: 'translateZ(0)',
+                    }}
                   />
                 </button>
               </div>
