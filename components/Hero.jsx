@@ -8,12 +8,13 @@ const Hero = () => {
 
       {/* Hero Image */}
       <div className="relative z-10 mb-4 w-full max-w-4xl mx-auto flex flex-col justify-center items-center">
-        <div className="relative w-full max-w-[500px] h-[320px] sm:h-[380px]">
+        <div className="relative w-full max-w-[520px] h-[360px] sm:h-[420px] min-h-[300px] safari-fix">
           <Image
             src="/img/hero_3.svg"
             alt="Hero Background"
             fill
-            className="object-contain"
+            draggable={false}
+            className="object-contain transform-gpu"
             priority
           />
         </div>
@@ -21,16 +22,17 @@ const Hero = () => {
 
       {/* Monitoring and Takedown Service Button */}
       <div className="mb-8 lg:mb-12">
-        <button className="relative flex items-center justify-center shadow hover:shadow-md transition-all overflow-hidden w-[293px] h-[35px] rounded-full">
+        <button className="relative flex items-center justify-center shadow hover:shadow-md transition-all overflow-hidden w-[310px] h-[40px] rounded-full safari-fix">
           <div className="absolute inset-0">
             <Image
               src="/img/service_button_bg.svg"
               alt="Service Button"
               fill
-              className="object-cover"
+              draggable={false}
+              className="object-cover transform-gpu"
             />
           </div>
-          <span className="relative z-10 text-[#1FA8CA] font-regular text-sm">
+          <span className="relative z-10 text-[#1FA8CA] text-sm">
             Monitoring and Takedown Service
           </span>
         </button>
@@ -38,7 +40,7 @@ const Hero = () => {
 
       {/* Main Content */}
       <div className="text-center max-w-5xl mx-auto px-4 font-plus-jakarta">
-        
+
         {/* Headline */}
         <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold mb-2 leading-[1.1]">
           <span className="bg-clip-text text-transparent" style={{
@@ -74,27 +76,29 @@ const Hero = () => {
           We scan the web for stolen photos & videos and remove them fast. Your first leak check is 100% free.
         </p>
 
-        {/* CTA Button + Made by a Woman */}
+        {/* CTA + Made by Woman */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
 
-          {/* Get Started (SVG perfect scaling) */}
-          <button className="relative w-40 h-12">
+          {/* Get Started */}
+          <button className="relative w-44 h-14 safari-fix">
             <Image
               src="/img/get_started.svg"
               alt="Get Started Free"
               fill
-              className="object-contain"
+              draggable={false}
+              className="object-contain transform-gpu"
             />
           </button>
 
           {/* Made by a Woman */}
           <div className="flex items-center gap-2">
-            <div className="relative w-9 h-9">
+            <div className="relative w-10 h-10 safari-fix">
               <Image
                 src="/img/love.svg"
                 alt="Love"
                 fill
-                className="object-contain"
+                draggable={false}
+                className="object-contain transform-gpu"
               />
             </div>
             <span className="text-black font-bold text-sm lg:text-base">
@@ -104,7 +108,6 @@ const Hero = () => {
 
         </div>
       </div>
-
     </section>
   );
 };

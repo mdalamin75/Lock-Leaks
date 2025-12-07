@@ -19,145 +19,6 @@ body {
   overflow-x: hidden !important;
 }
 
-/* Safari/iPhone Image Quality Fixes - Prevent Blur */
-img {
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translateZ(0);
-  backface-visibility: hidden;
-  transform: translateZ(0);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* Use high-quality rendering for Safari */
-  -webkit-optimize-contrast: auto;
-  /* Prevent any image quality degradation */
-  image-rendering: auto;
-  -webkit-image-rendering: -webkit-optimize-contrast;
-  /* Force GPU acceleration for better quality */
-  will-change: transform;
-  -webkit-perspective: 1000;
-  perspective: 1000;
-}
-
-/* Better image quality for Next.js Image components */
-picture img,
-.next-image-wrapper img,
-span[style*="display: inline-block"] img,
-div[style*="position: relative"] img,
-img[data-nimg] {
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translateZ(0);
-  backface-visibility: hidden;
-  transform: translateZ(0);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* Force high quality rendering - especially for mobile */
-  image-rendering: -webkit-optimize-contrast;
-  image-rendering: auto;
-  -webkit-optimize-contrast: auto;
-  /* Prevent blur on mobile devices */
-  -webkit-perspective: 1000;
-  perspective: 1000;
-  /* Prevent any image compression or quality degradation */
-  -webkit-image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
-  image-rendering: -moz-crisp-edges;
-  image-rendering: pixelated;
-  /* Override to auto for photos, but ensure high quality */
-  image-rendering: auto;
-  /* Force full quality rendering */
-  -webkit-transform: translateZ(0) scale(1);
-  transform: translateZ(0) scale(1);
-  will-change: transform;
-}
-
-/* For SVG images - use crisp rendering and prevent blur */
-img[src$=".svg"],
-img[src$=".SVG"],
-img[src*=".svg"],
-img[src*="/img/"] {
-  image-rendering: -webkit-optimize-contrast;
-  shape-rendering: geometricPrecision;
-  -webkit-font-smoothing: antialiased;
-  /* Force high DPI rendering on Safari */
-  -webkit-transform: translateZ(0) scale(1);
-  transform: translateZ(0) scale(1);
-}
-
-/* For PNG/WebP images - use smooth rendering with high quality */
-img[src$=".png"],
-img[src$=".PNG"],
-img[src$=".webp"],
-img[src$=".WEBP"],
-img[src*=".png"],
-img[src*=".webp"] {
-  image-rendering: auto;
-  -webkit-optimize-contrast: auto;
-  /* Ensure proper scaling for retina - prevent quality loss */
-  -webkit-transform: translateZ(0) scale(1);
-  transform: translateZ(0) scale(1);
-  /* Force high quality rendering - no compression */
-  -webkit-backface-visibility: hidden;
-  backfaceVisibility: 'hidden';
-  will-change: transform;
-  /* Prevent browser image compression */
-  -webkit-image-rendering: -webkit-optimize-contrast;
-}
-
-/* Safari specific - prevent image blur on scale */
-@supports (-webkit-appearance: none) {
-  img {
-    -webkit-transform: translateZ(0) scale(1);
-    transform: translateZ(0) scale(1);
-    /* Force GPU acceleration for better quality */
-    will-change: transform;
-  }
-}
-
-/* Mobile-specific image quality fixes */
-@media (max-width: 768px) {
-  img {
-    image-rendering: -webkit-optimize-contrast;
-    -webkit-transform: translateZ(0) scale(1);
-    transform: translateZ(0) scale(1);
-    /* Prevent subpixel rendering blur on mobile */
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    /* Force high DPI rendering */
-    -webkit-perspective: 1000;
-    perspective: 1000;
-    will-change: transform;
-  }
-  
-  /* SVG images on mobile - ensure crisp rendering */
-  img[src$=".svg"],
-  img[src*=".svg"] {
-    image-rendering: -webkit-optimize-contrast;
-    shape-rendering: geometricPrecision;
-    -webkit-transform: translateZ(0) scale(1);
-    transform: translateZ(0) scale(1);
-    /* Prevent blur on mobile Safari */
-    -webkit-backface-visibility: hidden;
-    backface-visibility: hidden;
-  }
-  
-  /* Next.js Image components on mobile */
-  picture img,
-  img[data-nimg] {
-    image-rendering: -webkit-optimize-contrast;
-    image-rendering: auto;
-    -webkit-transform: translateZ(0);
-    transform: translateZ(0);
-  }
-}
-
-/* SVG background quality fix for Safari */
-[style*="background-image"] {
-  -webkit-backface-visibility: hidden;
-  -webkit-transform: translateZ(0);
-  backface-visibility: hidden;
-  transform: translateZ(0);
-}
-
 .font-plus-jakarta {
   font-family: var(--font-plus-jakarta-sans), system-ui, -apple-system, sans-serif;
 }
@@ -175,3 +36,12 @@ img[src*=".webp"] {
   animation: float 3s ease-in-out infinite;
 }
 
+/* Safari iOS FIX — optimize SVG clarity */
+@supports (-webkit-touch-callout: none) {
+  .safari-fix img, 
+  .safari-fix svg {
+    image-rendering: -webkit-optimize-contrast;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+  }
+}
