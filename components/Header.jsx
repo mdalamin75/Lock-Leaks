@@ -35,6 +35,7 @@ const Header = () => {
                 width={500} 
                 height={500} 
                 quality={100}
+                unoptimized={true}
                 sizes="(max-width: 768px) 96px, 96px"
                 className="w-24 h-24 object-contain"
               />

@@ -117,6 +117,7 @@ const BeforeAfterSection = () => {
                   width={1000}
                   height={1000}
                   quality={100}
+                  unoptimized={true}
                   sizes="(max-width: 640px) 280px, (max-width: 768px) 384px, (max-width: 1024px) 448px, (max-width: 1280px) 512px, 768px"
                   className="w-full max-w-[280px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl h-auto rounded-xl sm:rounded-2xl"
                 />

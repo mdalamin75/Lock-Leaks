@@ -29,6 +29,13 @@ img {
   -moz-osx-font-smoothing: grayscale;
   /* Use high-quality rendering for Safari */
   -webkit-optimize-contrast: auto;
+  /* Prevent any image quality degradation */
+  image-rendering: auto;
+  -webkit-image-rendering: -webkit-optimize-contrast;
+  /* Force GPU acceleration for better quality */
+  will-change: transform;
+  -webkit-perspective: 1000;
+  perspective: 1000;
 }
 
 /* Better image quality for Next.js Image components */
@@ -50,6 +57,17 @@ img[data-nimg] {
   /* Prevent blur on mobile devices */
   -webkit-perspective: 1000;
   perspective: 1000;
+  /* Prevent any image compression or quality degradation */
+  -webkit-image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: pixelated;
+  /* Override to auto for photos, but ensure high quality */
+  image-rendering: auto;
+  /* Force full quality rendering */
+  -webkit-transform: translateZ(0) scale(1);
+  transform: translateZ(0) scale(1);
+  will-change: transform;
 }
 
 /* For SVG images - use crisp rendering and prevent blur */
@@ -74,9 +92,15 @@ img[src*=".png"],
 img[src*=".webp"] {
   image-rendering: auto;
   -webkit-optimize-contrast: auto;
-  /* Ensure proper scaling for retina */
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
+  /* Ensure proper scaling for retina - prevent quality loss */
+  -webkit-transform: translateZ(0) scale(1);
+  transform: translateZ(0) scale(1);
+  /* Force high quality rendering - no compression */
+  -webkit-backface-visibility: hidden;
+  backfaceVisibility: 'hidden';
+  will-change: transform;
+  /* Prevent browser image compression */
+  -webkit-image-rendering: -webkit-optimize-contrast;
 }
 
 /* Safari specific - prevent image blur on scale */

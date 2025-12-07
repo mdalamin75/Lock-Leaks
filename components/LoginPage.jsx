@@ -181,6 +181,7 @@ const LoginPage = () => {
               width={200}
               height={200}
               quality={100}
+              unoptimized={true}
               sizes="(max-width: 640px) 100px, 200px"
               className="h-8 sm:h-8 w-auto object-contain"
             />
@@ -262,11 +263,16 @@ const LoginPage = () => {
                 width={400}
                 height={400}
                 quality={100}
-                unoptimized={false}
+                unoptimized={true}
                 sizes="(max-width: 640px) 160px, (max-width: 1024px) 192px, 256px"
                 className="w-full max-w-40 sm:max-w-48 lg:max-w-64 h-auto object-contain"
                 priority
-                style={{ imageRendering: 'auto' }}
+                style={{ 
+                  imageRendering: '-webkit-optimize-contrast',
+                  WebkitBackfaceVisibility: 'hidden',
+                  backfaceVisibility: 'hidden',
+                  transform: 'translateZ(0)',
+                }}
               />
             </div>
           </div>

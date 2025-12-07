@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Left Section - Brand */}
           <div className="space-y-4">
             {/* <h2 className="text-2xl lg:text-3xl font-bold text-[#1E3A5F]">Lock Leaks</h2> */}
-            <Image src="/img/footer_logo_2.webp" alt="Lock Leaks" width={500} height={500} quality={100} sizes="(max-width: 768px) 192px, 192px" className="w-48 h-auto object-contain" />
+            <Image src="/img/footer_logo_2.webp" alt="Lock Leaks" width={500} height={500} quality={100} unoptimized={true} sizes="(max-width: 768px) 192px, 192px" className="w-48 h-auto object-contain" />
             <p className="text-sm lg:text-base font-medium leading-none text-[#1a1a1a]">
               Grow your revenue while we protect your content.
             </p>

@@ -57,7 +57,7 @@ const PromotionalSection = () => {
               >
                 {/* Profile Image Container */}
                 <div className="relative">
-                  <Image src="/img/model.webp" alt="Profile Image" width={200} height={200} quality={100} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 208px" className="w-full h-auto mt-5 md:mt-8" />
+                  <Image src="/img/model.webp" alt="Profile Image" width={200} height={200} quality={100} unoptimized={true} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 208px" className="w-full h-auto mt-5 md:mt-8" />
                   
                   {/* Stat Badge - positioned at top edge */}
                   <div className="absolute top-0 left-1/2 transform -translate-x-1/2 z-10">
@@ -103,7 +103,7 @@ const PromotionalSection = () => {
               >
                 {/* Profile Image Container */}
                 <div className="relative">
-                  <Image src="/img/model.webp" alt="Profile Image" width={200} height={200} quality={100} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 208px" className="w-full h-auto mt-6 md:mt-8" />
+                  <Image src="/img/model.webp" alt="Profile Image" width={200} height={200} quality={100} unoptimized={true} sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 208px" className="w-full h-auto mt-6 md:mt-8" />
                   
                   {/* Stat Badge - positioned at top edge */}
                   <div className="absolute top-0 left-1/2 transform -translate-x-1/2 z-10">

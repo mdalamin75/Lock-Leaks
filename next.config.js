@@ -3,13 +3,14 @@ const nextConfig = {
   reactStrictMode: true,
   images: {
     domains: [],
-    formats: ['image/avif', 'image/webp'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 60,
-    // Disable optimization for SVG files to preserve quality
+    // Disable ALL image optimization to preserve full quality - images will display exactly as in /img folder
+    unoptimized: true,
+    // Keep SVG support
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    // Remove format conversion and size optimization to prevent any quality loss
+    // formats: ['image/avif', 'image/webp'], // Removed - prevents format conversion
+    // deviceSizes and imageSizes removed - not needed when unoptimized
   },
   // Optimize for production
   swcMinify: true,
