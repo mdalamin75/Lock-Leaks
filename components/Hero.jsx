@@ -10,7 +10,7 @@ const Hero = () => {
       <div className="relative z-10 mb-4 w-full max-w-4xl mx-auto flex flex-col justify-center items-center">
         <div className="w-full max-w-[520px]">
           <img
-            src="/img/hero_3.svg"
+            src="/img/test.webp"
             alt="Hero Background"
             className="w-full h-auto block"
             draggable="false"
