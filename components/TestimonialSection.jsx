@@ -83,16 +83,16 @@ const TestimonialSection = () => {
                 transform: 'translateZ(0)',
               }}
             />
-            {/* Hover state - testimonial_button.svg on left side, needs flip */}
+            {/* Hover state - testimonial_button.svg on left side, needs flip to point left */}
             <img
               src="/img/testimonial_button.svg"
               alt="Previous"
-              className="w-full h-full object-contain opacity-0 group-hover:opacity-100 absolute transition-opacity scale-x-[-1]"
+              className="w-full h-full object-contain opacity-0 group-hover:opacity-100 absolute transition-opacity"
               style={{ 
                 imageRendering: '-webkit-optimize-contrast',
                 WebkitBackfaceVisibility: 'hidden',
                 backfaceVisibility: 'hidden',
-                transform: 'translateZ(0)',
+                transform: 'translateZ(0) scaleX(-1)',
               }}
             />
           </button>
@@ -103,19 +103,19 @@ const TestimonialSection = () => {
             className="group absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 sm:translate-x-6 lg:translate-x-8 z-10 w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 transition-opacity"
             aria-label="Next testimonial"
           >
-            {/* Normal state - before.svg on right side, needs flip */}
+            {/* Normal state - before.svg on right side, needs flip to point right */}
             <img
               src="/img/testimonial_button_before.svg"
               alt="Next"
-              className="w-full h-full object-contain opacity-100 group-hover:opacity-0 absolute transition-opacity scale-x-[-1]"
+              className="w-full h-full object-contain opacity-100 group-hover:opacity-0 absolute transition-opacity"
               style={{ 
                 imageRendering: '-webkit-optimize-contrast',
                 WebkitBackfaceVisibility: 'hidden',
                 backfaceVisibility: 'hidden',
-                transform: 'translateZ(0)',
+                transform: 'translateZ(0) scaleX(-1)',
               }}
             />
-            {/* Hover state - testimonial_button.svg on right side, no flip needed */}
+            {/* Hover state - testimonial_button.svg on right side, already points right, no flip needed */}
             <img
               src="/img/testimonial_button.svg"
               alt="Next"
