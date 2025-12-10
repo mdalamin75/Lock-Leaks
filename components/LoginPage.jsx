@@ -1,8 +1,10 @@
 'use client';
 
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useState, useCallback, useMemo, useEffect } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
+import OptimizedImage from './OptimizedImage';
+import { getOptimizedImagePath } from '@/utils/imageHelper';
 
 // Move testimonials outside component to prevent recreation on each render
 const testimonials = [
@@ -27,6 +29,15 @@ const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [keepLoggedIn, setKeepLoggedIn] = useState(false);
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
+  const [loginBgPath, setLoginBgPath] = useState('/img/learge_login_bg.svg');
+  const [rightBgPath, setRightBgPath] = useState('/img/login_right_bg.svg');
+  const [shadowBgPath, setShadowBgPath] = useState('/img/login_right_shadow.svg');
+
+  useEffect(() => {
+    setLoginBgPath(getOptimizedImagePath('/img/learge_login_bg.svg'));
+    setRightBgPath(getOptimizedImagePath('/img/login_right_bg.svg'));
+    setShadowBgPath(getOptimizedImagePath('/img/login_right_shadow.svg'));
+  }, []);
 
   const nextTestimonial = useCallback(() => {
     setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
@@ -160,7 +171,7 @@ const LoginPage = () => {
             <button
               className="w-full pt-2 pb-8 rounded-lg text-white font-medium text-base transition-all hover:scale-105 font-inter relative"
               style={{
-                backgroundImage: 'url(/img/learge_login_bg.svg)',
+                backgroundImage: `url(${loginBgPath})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 backgroundRepeat: 'no-repeat',
@@ -189,18 +200,11 @@ const LoginPage = () => {
           <div className="flex items-center gap-3">
             <span className="text-sm text-[#515151] font-medium font-inter">Don't have an account?</span>
             <button >
-              <img
+              <OptimizedImage
                 src="/img/blue_button_2.svg"
                 alt="Sign Up"
                 className="w-full h-12 object-contain"
-                style={{ 
-                  imageRendering: '-webkit-optimize-contrast',
-                  WebkitBackfaceVisibility: 'hidden',
-                  backfaceVisibility: 'hidden',
-                  transform: 'translateZ(0)',
-                }}
               />
-              
             </button>
           </div>
         </div>
@@ -210,7 +214,7 @@ const LoginPage = () => {
       <div 
         className="w-full lg:w-1/2 min-h-screen bg-black flex items-center justify-center p-4 sm:p-6 lg:p-8"
         style={{
-          backgroundImage: 'url(/img/login_right_bg.svg)',
+          backgroundImage: `url(${rightBgPath})`,
           backgroundSize: 'contain',
           backgroundPosition: 'top center',
           backgroundRepeat: 'no-repeat',
@@ -281,7 +285,7 @@ const LoginPage = () => {
           <div 
             className="relative rounded-xl p-6 sm:p-8 mb-6 sm:mb-8 overflow-hidden"
             style={{
-              backgroundImage: 'url(/img/login_right_shadow.svg)',
+              backgroundImage: `url(${shadowBgPath})`,
               backgroundSize: 'cover',
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
@@ -292,15 +296,10 @@ const LoginPage = () => {
             </p>
             <div className="flex items-center gap-3 relative z-10">
               <div className="w-10 h-10 rounded-full flex-shrink-0 overflow-hidden">
-                <Image
+                <OptimizedImage
                   src="/img/login_profile.svg"
                   alt="Profile"
-                  width={40}
-                  height={40}
-                  quality={100}
-                  unoptimized={true}
                   className="w-full h-full object-cover"
-                  style={{ imageRendering: '-webkit-optimize-contrast' }}
                 />
               </div>
               <div>
@@ -342,16 +341,10 @@ const LoginPage = () => {
 
           {/* Trustpilot Rating */}
           <div className="flex items-center justify-center gap-3">
-            <Image
+            <OptimizedImage
               src="/img/trustpilot.svg"
               alt="Trustpilot"
-              width={120}
-              height={40}
-              quality={100}
-              unoptimized={true}
-              sizes="(max-width: 640px) 96px, 120px"
               className="h-8 sm:h-10 w-auto object-contain"
-              style={{ imageRendering: '-webkit-optimize-contrast' }}
             />
           </div>
         </div>

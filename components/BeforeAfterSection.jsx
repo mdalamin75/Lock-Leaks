@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import OptimizedImage from './OptimizedImage';
 
 const BeforeAfterSection = () => {
   // Before items with negative consequences
@@ -56,25 +57,19 @@ const BeforeAfterSection = () => {
         </div>
 
         {/* Main Content Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-6 lg:gap-6 items-center">
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-6 lg:gap-6 items-center">
           {/* Left Side - Before Items */}
-          <div className="flex flex-col justify-center items-center gap-3 sm:gap-4 lg:gap-16 w-full order-1 md:order-1">
+          <div className="flex flex-col justify-center items-center gap-3 sm:gap-4 lg:gap-16 w-full col-span-2">
             {beforeItems.map((item, index) => (
               <div
                 key={index}
                 className="flex items-center justify-between gap-2 sm:gap-3 bg-white shadow rounded-full px-3 sm:px-4 py-1 w-full max-w-xs sm:max-w-sm md:max-w-56"
               >
                 <div className="flex-shrink-0">
-                  <img
+                  <OptimizedImage
                     src={item.icon}
                     alt={item.text}
                     className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7"
-                    style={{ 
-                      imageRendering: '-webkit-optimize-contrast',
-                      WebkitBackfaceVisibility: 'hidden',
-                      backfaceVisibility: 'hidden',
-                      transform: 'translateZ(0)',
-                    }}
                   />
                 </div>
                 <span className="text-xs sm:text-sm font-medium text-black whitespace-nowrap">
@@ -85,19 +80,13 @@ const BeforeAfterSection = () => {
           </div>
 
           {/* Center - Model Image with Label */}
-          <div className="flex flex-col md:flex-row items-center relative order-3 md:order-2 md:col-span-1">
+          <div className="flex flex-col md:flex-row items-center relative md:col-span-1">
             {/* Arrow Group - positioned between left and center, larger size */}
             <div className="hidden md:block z-10">
-              <img
+              <OptimizedImage
                 src="/img/arrow_group.svg"
                 alt="Arrows"
                 className="w-full h-auto object-contain"
-                style={{ 
-                  imageRendering: '-webkit-optimize-contrast',
-                  WebkitBackfaceVisibility: 'hidden',
-                  backfaceVisibility: 'hidden',
-                  transform: 'translateZ(0)',
-                }}
               />
             </div>
             
@@ -126,49 +115,23 @@ const BeforeAfterSection = () => {
           </div>
 
           {/* Right Side - After Stats */}
-          <div className="flex flex-col justify-between max-h-[370px] mb-16 md:mb-0 mt-16 gap-4 sm:gap-6 lg:gap-8 items-center md:items-start order-2 md:order-3 h-full ">
+          <div className="flex flex-col justify-between max-h-[280px] md:max-h-[370px] mb-16 md:mb-0 mt-16 gap-4 sm:gap-6 lg:gap-8 items-center md:items-start h-full ">
             {/* Dollar Amount */}
             <div className="flex items-baseline gap-1 sm:gap-2">
-              <img
+              <OptimizedImage
                 src="/img/dollar_count.svg"
                 alt="Dollar"
-                className="w-10 h-10 sm:w-32 sm:h-12 md:w-40 md:h-16 lg:w-44 lg:h-20 flex-shrink-0"
-                style={{ 
-                  imageRendering: '-webkit-optimize-contrast',
-                  WebkitBackfaceVisibility: 'hidden',
-                  backfaceVisibility: 'hidden',
-                  transform: 'translateZ(0)',
-                }}
+                className="w-32 h-14 sm:w-32 sm:h-12 md:w-40 md:h-16 lg:w-44 lg:h-20 flex-shrink-0"
               />
-              {/* <div className="flex items-baseline">
-                <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-black">
-                  0,
-                </span>
-                <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black">
-                  0
-                </span>
-                <span className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-bold text-black">
-                  11
-                </span>
-              </div> */}
             </div>
 
             {/* Views Count */}
             <div className="flex items-center gap-1 sm:gap-2">
-              <img
+              <OptimizedImage
                 src="/img/eye_count.svg"
                 alt="Views"
-                className="w-32 h-8 sm:w-32 sm:h-10 md:w-40 md:h-12 lg:w-44 lg:h-16 flex-shrink-0"
-                style={{ 
-                  imageRendering: '-webkit-optimize-contrast',
-                  WebkitBackfaceVisibility: 'hidden',
-                  backfaceVisibility: 'hidden',
-                  transform: 'translateZ(0)',
-                }}
+                className="w-32 h-10 sm:w-32 sm:h-10 md:w-40 md:h-12 lg:w-44 lg:h-16 flex-shrink-0"
               />
-              {/* <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold text-black">
-                000
-              </span> */}
             </div>
           </div>
         </div>
@@ -176,16 +139,10 @@ const BeforeAfterSection = () => {
         {/* Get Started Free Button */}
         <div className="flex justify-center items-center mt-8 sm:mt-12 lg:mt-16">
           <button className="hover:opacity-90 transition-opacity">
-            <img 
+            <OptimizedImage
               src="/img/get_started.svg" 
               alt="Get Started Free" 
               className="w-32 h-10 sm:w-40 sm:h-12 md:w-44 md:h-14 object-contain"
-              style={{ 
-                imageRendering: '-webkit-optimize-contrast',
-                WebkitBackfaceVisibility: 'hidden',
-                backfaceVisibility: 'hidden',
-                transform: 'translateZ(0)',
-              }}
             />
           </button>
         </div>

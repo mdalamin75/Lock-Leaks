@@ -1,14 +1,15 @@
 import React from 'react';
 import Image from 'next/image';
+import OptimizedImage from './OptimizedImage';
 
 const Footer = () => {
   return (
     <footer className="w-full bg-white pt-12 pb-8 px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
           {/* Left Section - Brand */}
-          <div className="space-y-4">
+          <div className="space-y-4 order-1 md:order-1">
             {/* <h2 className="text-2xl lg:text-3xl font-bold text-[#1E3A5F]">Lock Leaks</h2> */}
             <Image src="/img/footer_logo_2.webp" alt="Lock Leaks" width={500} height={500} quality={100} unoptimized={true} sizes="(max-width: 768px) 192px, 192px" className="w-48 h-auto object-contain" />
             <p className="text-sm lg:text-base font-medium leading-none text-[#1a1a1a]">
@@ -17,16 +18,10 @@ const Footer = () => {
             
             {/* Made by a Woman */}
             <div className="flex items-center gap-2">
-              <img 
+              <OptimizedImage
                 src="/img/love.svg"
                 alt="Love" 
                 className="w-5 h-5"
-                style={{ 
-                  imageRendering: '-webkit-optimize-contrast',
-                  WebkitBackfaceVisibility: 'hidden',
-                  backfaceVisibility: 'hidden',
-                  transform: 'translateZ(0)',
-                }}
               />
               <span className="text-[#1a1a1a] font-semibold text-sm">Made by a Woman</span>
             </div>
@@ -71,13 +66,13 @@ const Footer = () => {
 
             {/* All services are online */}
             <div className="flex items-center gap-1 pt-2">
-              <img src="/img/green_right.svg" alt="Green right" className="w-5 h-4" style={{ imageRendering: '-webkit-optimize-contrast', WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }} />
+              <OptimizedImage src="/img/green_right.svg" alt="Green right" className="w-5 h-4" />
               <span className="text-xs text-[#1a1a1a]">All services are online</span>
             </div>
           </div>
 
           {/* Get Started Column */}
-          <div className="space-y-4">
+          <div className="space-y-4 order-2 md:order-2">
             <h3 className="text-base font-medium text-black">Get Started</h3>
             <ul className="space-y-1.5">
               <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors">Remove OnlyFans Leaks</a></li>
@@ -91,7 +86,7 @@ const Footer = () => {
           </div>
 
           {/* Explore Column */}
-          <div className="space-y-4">
+          <div className="space-y-4 order-4 md:order-3">
             <h3 className="text-base font-medium text-black">Explore</h3>
             <ul className="space-y-1.5">
               <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors">Home</a></li>
@@ -104,22 +99,22 @@ const Footer = () => {
           </div>
 
           {/* Company Column */}
-          <div className="space-y-4">
+          <div className="space-y-4 order-3 md:order-4">
             <h3 className="text-base font-medium text-black">Company</h3>
             <ul className="space-y-1.5">
-              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors px-2">About Us</a></li>
-              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors px-2">For Agencies</a></li>
+              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors md:px-2">About Us</a></li>
+              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors md:px-2">For Agencies</a></li>
               <li className="bg-gradient-to-r from-[#e9e8e8] to-[#4abee2af] rounded-full max-w-36 px-2">
                 <a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors inline-flex items-center gap-1">
                   Affiliate Program 
                   <span className="text-xs">30%</span>
                 </a>
               </li>
-              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors px-2">Manage Your Data</a></li>
-              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors px-2">Contact Us</a></li>
-              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors px-2">Privacy Policy</a></li>
-              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors px-2">Cookies Policy</a></li>
-              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors px-2">Terms of Service</a></li>
+              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors md:px-2">Manage Your Data</a></li>
+              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors md:px-2">Contact Us</a></li>
+              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors md:px-2">Privacy Policy</a></li>
+              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors md:px-2">Cookies Policy</a></li>
+              <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors md:px-2">Terms of Service</a></li>
             </ul>
           </div>
         </div>
@@ -134,7 +129,7 @@ const Footer = () => {
             <p>© 2025 LockLeaks. All rights reserved.</p>
             {/* <span className="hidden md:inline">•</span> */}
             <p className="flex items-center gap-1 font-semibold">
-              Part of FaNetwork <img src="/img/flag.svg" alt="Flag" className="w-4 h-4 mt-1.5" style={{ imageRendering: '-webkit-optimize-contrast', WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }} />
+              Part of FaNetwork <OptimizedImage src="/img/flag.svg" alt="Flag" className="w-4 h-4 mt-1.5" />
             </p>
           </div>
         </div>

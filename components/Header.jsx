@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import OptimizedImage from "./OptimizedImage";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -64,11 +65,10 @@ const Header = () => {
               {/* Login Button */}
               <Link href="/login" className="hover:opacity-80 transition-opacity">
                 <div className="relative w-28 h-8">
-                  <Image
+                  <OptimizedImage
                     src="/img/login_button.svg"
                     alt="Login"
-                    fill
-                    className="object-contain"
+                    className="w-full h-full object-contain"
                   />
                 </div>
               </Link>
@@ -76,11 +76,10 @@ const Header = () => {
               {/* Start Free Button */}
               <button className="mt-1">
                 <div className="relative w-32 h-9">
-                  <Image
+                  <OptimizedImage
                     src="/img/blue_button_2.svg"
                     alt="Start Free"
-                    fill
-                    className="object-contain"
+                    className="w-full h-full object-contain"
                   />
                 </div>
               </button>
@@ -169,11 +168,10 @@ const Header = () => {
                     className="flex justify-center hover:opacity-80 transition-opacity"
                   >
                     <div className="relative w-40 h-10">
-                      <Image
+                      <OptimizedImage
                         src="/img/login_button.svg"
                         alt="Login"
-                        fill
-                        className="object-contain"
+                        className="w-full h-full object-contain"
                       />
                     </div>
                   </Link>
@@ -181,11 +179,10 @@ const Header = () => {
                   {/* Start Free */}
                   <button onClick={closeMenu} className="flex justify-center">
                     <div className="relative w-44 h-11">
-                      <Image
+                      <OptimizedImage
                         src="/img/blue_button_2.svg"
                         alt="Start Free"
-                        fill
-                        className="object-contain"
+                        className="w-full h-full object-contain"
                       />
                     </div>
                   </button>

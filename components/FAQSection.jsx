@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import OptimizedImage from './OptimizedImage';
 
 const FAQSection = () => {
   const [openIndex, setOpenIndex] = useState(0);
@@ -67,7 +68,7 @@ const FAQSection = () => {
             <div className="mt-auto">
               {/* Profile Icons */}
               <div className="flex items-center gap-3">
-                <img src="/img/profile_group.svg" alt="Profile" className="w-24 h-16 object-contain" style={{ imageRendering: '-webkit-optimize-contrast', WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }} />
+                <OptimizedImage src="/img/profile_group.svg" alt="Profile" className="w-24 h-16 object-contain" />
               </div>
 
               {/* Heading */}
@@ -82,7 +83,7 @@ const FAQSection = () => {
 
               {/* Contact Support Button */}
               <button className="transition-transform hover:scale-105">
-                <img src="/img/contact_support.svg" alt="Contact Support" className="w-48 h-16 object-contain" style={{ imageRendering: '-webkit-optimize-contrast', WebkitBackfaceVisibility: 'hidden', backfaceVisibility: 'hidden', transform: 'translateZ(0)' }} />
+                <OptimizedImage src="/img/contact_support.svg" alt="Contact Support" className="w-32 md:w-48 h-10 md:h-16 object-contain" />
               </button>
             </div>
           </div>
@@ -101,28 +102,16 @@ const FAQSection = () => {
                   {/* Icon - Just the arrow image */}
                   <div className="flex-shrink-0">
                     {openIndex === index ? (
-                      <img
+                      <OptimizedImage
                         src="/img/arrow_down.svg"
                         alt="Down arrow"
                         className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
-                        style={{ 
-                          imageRendering: '-webkit-optimize-contrast',
-                          WebkitBackfaceVisibility: 'hidden',
-                          backfaceVisibility: 'hidden',
-                          transform: 'translateZ(0)',
-                        }}
                       />
                     ) : (
-                      <img
+                      <OptimizedImage
                         src="/img/arrow_right.svg"
                         alt="Right arrow"
                         className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
-                        style={{ 
-                          imageRendering: '-webkit-optimize-contrast',
-                          WebkitBackfaceVisibility: 'hidden',
-                          backfaceVisibility: 'hidden',
-                          transform: 'translateZ(0)',
-                        }}
                       />
                     )}
                   </div>

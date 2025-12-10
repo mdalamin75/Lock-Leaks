@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "convert-svg": "node scripts/convert-svg-to-webp.js"
   },
   "dependencies": {
     "next": "^14.0.0",
@@ -17,6 +18,7 @@
     "@next/font": "^14.2.15",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.31",
+    "sharp": "^0.34.5",
     "tailwindcss": "^3.3.5"
   }
 }

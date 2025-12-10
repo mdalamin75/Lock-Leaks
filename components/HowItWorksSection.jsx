@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import OptimizedImage from './OptimizedImage';
 
 const HowItWorksSection = () => {
   const steps = [
@@ -66,13 +67,12 @@ const HowItWorksSection = () => {
               {/* Number Badge - Left aligned */}
               <div className="flex-shrink-0">
                 <div 
-                  className="text-7xl sm:text-7xl lg:text-7xl font-bold leading-none font-plus-jakarta"
+                  className={`text-5xl sm:text-5xl lg:text-7xl font-bold leading-none font-plus-jakarta ${index === 0 ? 'md:ml-4' : ''}`}
                   style={{
                     ...gradientStyle,
                     WebkitBackgroundClip: 'text',
                     WebkitTextFillColor: 'transparent',
                     backgroundClip: 'text',
-                    marginLeft: index === 0 ? '16px' : '0',
                   }}
                 >
                   {step.number}
@@ -83,18 +83,10 @@ const HowItWorksSection = () => {
               <div className="flex-1">
                 {/* Badge */}
                 <div className="mb-2">
-                  <img
+                  <OptimizedImage
                     src={step.badgeImage}
                     alt={step.badge}
                     className="h-8 sm:h-10 lg:h-10 w-auto object-contain"
-                    style={{ 
-                      width: 'auto',
-                      height: 'auto',
-                      imageRendering: '-webkit-optimize-contrast',
-                      WebkitBackfaceVisibility: 'hidden',
-                      backfaceVisibility: 'hidden',
-                      transform: 'translateZ(0)',
-                    }}
                   />
                 </div>
 
@@ -110,18 +102,10 @@ const HowItWorksSection = () => {
 
                 {/* Button */}
                 <button className="group transition-all hover:scale-105 hover:opacity-90">
-                  <img
+                  <OptimizedImage
                     src={step.buttonImage}
                     alt={step.buttonText}
-                    className="h-12 sm:h-12 lg:h-12 w-auto object-contain"
-                    style={{ 
-                      width: 'auto',
-                      height: 'auto',
-                      imageRendering: '-webkit-optimize-contrast',
-                      WebkitBackfaceVisibility: 'hidden',
-                      backfaceVisibility: 'hidden',
-                      transform: 'translateZ(0)',
-                    }}
+                    className="h-10 sm:h-10 lg:h-12 w-auto object-contain"
                   />
                 </button>
               </div>

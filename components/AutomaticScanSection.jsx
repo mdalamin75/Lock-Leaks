@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import OptimizedImage from './OptimizedImage';
 
 const AutomaticScanSection = () => {
   // Icons arranged in wave pattern - each icon has specific vertical position
@@ -62,16 +63,10 @@ const AutomaticScanSection = () => {
                 className={`flex items-center justify-center flex-shrink-0 ${item.marginClasses}`}
               >
                 <div className="relative group flex items-center justify-center">
-                  <img
+                  <OptimizedImage
                     src={item.icon}
                     alt={item.name}
                     className={`${item.widthHeight} object-contain opacity-100 group-hover:opacity-100 transition-opacity`}
-                    style={{ 
-                      imageRendering: '-webkit-optimize-contrast',
-                      WebkitBackfaceVisibility: 'hidden',
-                      backfaceVisibility: 'hidden',
-                      transform: 'translateZ(0)',
-                    }}
                   />
                 </div>
               </div>

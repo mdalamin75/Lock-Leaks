@@ -1,17 +1,25 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import OptimizedImage from "./OptimizedImage";
+import { getOptimizedImagePath } from "@/utils/imageHelper";
 
 const FooterTop = () => {
+  const [bgPath, setBgPath] = useState('/img/footer_top_bg.svg');
+
+  useEffect(() => {
+    setBgPath(getOptimizedImagePath('/img/footer_top_bg.svg'));
+  }, []);
+
   return (
     <section
       className="w-full max-w-7xl mx-auto relative overflow-hidden rounded-2xl bg-center bg-no-repeat bg-cover"
       style={{
-        backgroundImage: "url(/img/footer_top_bg.svg)",
+        backgroundImage: `url(${bgPath})`,
       }}
     >
       {/* Content Layer */}
-      <div className="relative z-10 py-12 sm:py-10 lg:py-12 px-4 sm:px-6 lg:px-8">
+      <div className="relative z-10 py-4 sm:py-4 lg:py-12 px-3 sm:px-3 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
 
           {/* Main Heading */}
@@ -20,7 +28,7 @@ const FooterTop = () => {
           </h2>
 
           {/* Subtitle */}
-          <p className="text-base text-white mb-6 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-base text-white mb-3 md:mb-6 max-w-3xl mx-auto leading-relaxed">
             LockLeaks keeps your content safe so you can focus on growing — not worrying.
           </p>
 
@@ -29,11 +37,10 @@ const FooterTop = () => {
 
             {/* Profile Group */}
             <div className="relative w-12 h-12">
-              <Image
+              <OptimizedImage
                 src="/img/profile_group.svg"
                 alt="User Profiles"
-                fill
-                className="object-contain"
+                className="w-full h-full object-contain"
               />
             </div>
 
@@ -49,11 +56,10 @@ const FooterTop = () => {
             <div className="flex items-center gap-1">
               {[...Array(5)].map((_, index) => (
                 <div key={index} className="relative w-4 h-4">
-                  <Image
+                  <OptimizedImage
                     src="/img/star_gold.svg"
                     alt="Star"
-                    fill
-                    className="object-contain"
+                    className="w-full h-full object-contain"
                   />
                 </div>
               ))}
@@ -68,11 +74,10 @@ const FooterTop = () => {
           {/* CTA Button */}
           <div className="flex justify-center">
             <button className="hover:opacity-90 transition-opacity relative w-48 h-10">
-              <Image
+              <OptimizedImage
                 src="/img/start_free_scan.svg"
                 alt="Start Free Scan"
-                fill
-                className="object-contain"
+                className="w-full h-full object-contain"
               />
             </button>
           </div>

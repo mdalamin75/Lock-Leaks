@@ -1,16 +1,9 @@
 "use client";
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import OptimizedImage from "./OptimizedImage";
 
 const Hero = () => {
-  const [isIOS, setIsIOS] = useState(false);
-
-  useEffect(() => {
-    if (typeof navigator !== "undefined") {
-      const ios = /iPad|iPhone|iPod/.test(navigator.userAgent);
-      setIsIOS(ios);
-    }
-  }, []);
 
   return (
     <section className="w-full bg-white flex flex-col items-center justify-center pt-24 lg:pt-28 px-6 lg:px-8">
@@ -19,22 +12,12 @@ const Hero = () => {
       <div className="relative z-10 mb-4 w-full max-w-4xl mx-auto flex flex-col justify-center items-center">
 
         <div className="w-full max-w-[520px]">
-          {/* iOS image */}
-          {isIOS ? (
-            <img
-              src="/img/test.webp"
-              alt="Hero Background iOS"
-              className="w-full h-auto block"
-              draggable="false"
-            />
-          ) : (
-            <img
-              src="/img/hero_3.svg"
-              alt="Hero Background"
-              className="w-full h-auto block"
-              draggable="false"
-            />
-          )}
+          <OptimizedImage
+            src="/img/hero_3.svg"
+            alt="Hero Background"
+            className="w-full h-auto block"
+            draggable="false"
+          />
         </div>
 
       </div>
@@ -43,15 +26,14 @@ const Hero = () => {
       <div className="mb-8 lg:mb-12">
         <button className="relative flex items-center justify-center shadow hover:shadow-md transition-all overflow-hidden w-[293px] h-[35px] rounded-full">
           <div className="absolute inset-0">
-            <Image
+            <OptimizedImage
               src="/img/service_button_bg.svg"
               alt="Service Button"
-              fill
+              className="w-full h-full object-cover"
               draggable={false}
-              className="object-cover"
             />
           </div>
-          <span className="relative z-10 text-[#1FA8CA] font-regular text-sm">
+          <span className="relative z-10 text-[#1FA8CA] font-regular text-sm -mr-8">
             Monitoring and Takedown Service
           </span>
         </button>
@@ -100,23 +82,21 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
 
           <button className="relative w-40 h-12">
-            <Image
+            <OptimizedImage
               src="/img/get_started.svg"
               alt="Get Started Free"
-              fill
+              className="w-full h-full object-contain"
               draggable={false}
-              className="object-contain"
             />
           </button>
 
           <div className="flex items-center gap-2">
             <div className="relative w-9 h-9">
-              <Image
+              <OptimizedImage
                 src="/img/love.svg"
                 alt="Love"
-                fill
+                className="w-full h-full object-contain"
                 draggable={false}
-                className="object-contain"
               />
             </div>
             <span className="text-black font-bold text-sm lg:text-base">

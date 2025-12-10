@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import OptimizedImage from './OptimizedImage';
 
 const TrustedSection = () => {
   const [counts, setCounts] = useState({
@@ -132,16 +133,10 @@ const TrustedSection = () => {
         {/* Trusted Image */}
         <div className="flex justify-center mb-8 sm:mb-8 lg:mb-8">
           <div className="w-full max-w-7xl lg:max-w-7xl">
-            <img
+            <OptimizedImage
               src="/img/trusted.svg"
               alt="Trusted DMCA Service"
               className="w-full h-auto object-contain"
-              style={{ 
-                imageRendering: '-webkit-optimize-contrast',
-                WebkitBackfaceVisibility: 'hidden',
-                backfaceVisibility: 'hidden',
-                transform: 'translateZ(0)',
-              }}
             />
           </div>
         </div>

@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import Image from 'next/image';
+import OptimizedImage from './OptimizedImage';
 
 const TestimonialSection = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -72,28 +73,17 @@ const TestimonialSection = () => {
             aria-label="Previous testimonial"
           >
             {/* Normal state - before.svg on left side, no flip needed */}
-            <img
+            <OptimizedImage
               src="/img/testimonial_button_before.svg"
               alt="Previous"
               className="w-full h-full object-contain opacity-100 group-hover:opacity-0 absolute transition-opacity"
-              style={{ 
-                imageRendering: '-webkit-optimize-contrast',
-                WebkitBackfaceVisibility: 'hidden',
-                backfaceVisibility: 'hidden',
-                transform: 'translateZ(0)',
-              }}
             />
             {/* Hover state - testimonial_button.svg on left side, needs flip to point left */}
-            <img
+            <OptimizedImage
               src="/img/testimonial_button.svg"
               alt="Previous"
               className="w-full h-full object-contain opacity-0 group-hover:opacity-100 absolute transition-opacity"
-              style={{ 
-                imageRendering: '-webkit-optimize-contrast',
-                WebkitBackfaceVisibility: 'hidden',
-                backfaceVisibility: 'hidden',
-                transform: 'translateZ(0) scaleX(-1)',
-              }}
+              style={{ transform: 'scaleX(-1)' }}
             />
           </button>
 
@@ -104,28 +94,17 @@ const TestimonialSection = () => {
             aria-label="Next testimonial"
           >
             {/* Normal state - before.svg on right side, needs flip to point right */}
-            <img
+            <OptimizedImage
               src="/img/testimonial_button_before.svg"
               alt="Next"
               className="w-full h-full object-contain opacity-100 group-hover:opacity-0 absolute transition-opacity"
-              style={{ 
-                imageRendering: '-webkit-optimize-contrast',
-                WebkitBackfaceVisibility: 'hidden',
-                backfaceVisibility: 'hidden',
-                transform: 'translateZ(0) scaleX(-1)',
-              }}
+              style={{ transform: 'scaleX(-1)' }}
             />
             {/* Hover state - testimonial_button.svg on right side, already points right, no flip needed */}
-            <img
+            <OptimizedImage
               src="/img/testimonial_button.svg"
               alt="Next"
               className="w-full h-full object-contain opacity-0 group-hover:opacity-100 absolute transition-opacity"
-              style={{ 
-                imageRendering: '-webkit-optimize-contrast',
-                WebkitBackfaceVisibility: 'hidden',
-                backfaceVisibility: 'hidden',
-                transform: 'translateZ(0)',
-              }}
             />
           </button>
 
@@ -139,16 +118,10 @@ const TestimonialSection = () => {
               {/* Profile Image Container */}
               <div className="relative z-10 flex-shrink-0">
                 <div className="relative w-28 h-28 sm:w-32 sm:h-32 lg:w-48 lg:h-48 rounded-xl sm:rounded-2xl overflow-hidden">
-                  <img
+                  <OptimizedImage
                     src={currentTestimonial.profileImage}
                     alt="Creator Profile"
                     className="w-full h-full object-cover"
-                    style={{ 
-                      imageRendering: '-webkit-optimize-contrast',
-                      WebkitBackfaceVisibility: 'hidden',
-                      backfaceVisibility: 'hidden',
-                      transform: 'translateZ(0)',
-                    }}
                   />
                   {/* Top 0,8% Text - Using percentage positioning for consistent placement */}
                   <div className="absolute bottom-[14%] lg:bottom-[15%] right-[6%]">
@@ -164,16 +137,10 @@ const TestimonialSection = () => {
             <div className="relative text-center">
               {/* Large Quotation Marks */}
               <div className="absolute left-2 sm:left-4 lg:left-6 -top-2 sm:-top-4 lg:-top-6 w-16 h-16 sm:w-20 sm:h-20 lg:w-24 lg:h-24">
-                <img
+                <OptimizedImage
                   src="/img/quoto.svg"
                   alt="Quote"
                   className="w-full h-full object-contain"
-                  style={{ 
-                    imageRendering: '-webkit-optimize-contrast',
-                    WebkitBackfaceVisibility: 'hidden',
-                    backfaceVisibility: 'hidden',
-                    transform: 'translateZ(0)',
-                  }}
                 />
               </div>
               
