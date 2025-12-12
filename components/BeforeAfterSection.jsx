@@ -59,7 +59,7 @@ const BeforeAfterSection = () => {
         {/* Main Content Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-6 lg:gap-6 items-center">
           {/* Left Side - Before Items */}
-          <div className="flex flex-col justify-center items-center gap-3 sm:gap-4 lg:gap-16 w-full col-span-2">
+          <div className="flex flex-col justify-center items-center gap-3 sm:gap-4 lg:gap-16 w-full col-span-2 md:col-span-1">
             {beforeItems.map((item, index) => (
               <div
                 key={index}
@@ -107,8 +107,7 @@ const BeforeAfterSection = () => {
                   height={1000}
                   quality={100}
                   unoptimized={true}
-                  sizes="(max-width: 640px) 280px, (max-width: 768px) 384px, (max-width: 1024px) 448px, (max-width: 1280px) 512px, 768px"
-                  className="w-full max-w-[280px] sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-2xl h-auto rounded-xl sm:rounded-2xl"
+                  className="w-full  h-auto rounded-xl sm:rounded-2xl"
                 />
               </div>
             </div>

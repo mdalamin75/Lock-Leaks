@@ -7,9 +7,9 @@ const Footer = () => {
     <footer className="w-full bg-white pt-12 pb-8 px-6 lg:px-12">
       <div className="max-w-7xl mx-auto">
         {/* Main Footer Content */}
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12 mb-12">
           {/* Left Section - Brand */}
-          <div className="space-y-4 order-1 md:order-1">
+          <div className="space-y-4">
             {/* <h2 className="text-2xl lg:text-3xl font-bold text-[#1E3A5F]">Lock Leaks</h2> */}
             <Image src="/img/footer_logo_2.webp" alt="Lock Leaks" width={500} height={500} quality={100} unoptimized={true} sizes="(max-width: 768px) 192px, 192px" className="w-48 h-auto object-contain" />
             <p className="text-sm lg:text-base font-medium leading-none text-[#1a1a1a]">
@@ -66,13 +66,13 @@ const Footer = () => {
 
             {/* All services are online */}
             <div className="flex items-center gap-1 pt-2">
-              <OptimizedImage src="/img/green_right.svg" alt="Green right" className="w-5 h-4" />
+              <OptimizedImage src="/img/green_right.svg" alt="Green right" className="w-4 h-4" />
               <span className="text-xs text-[#1a1a1a]">All services are online</span>
             </div>
           </div>
 
           {/* Get Started Column */}
-          <div className="space-y-4 order-2 md:order-2">
+          <div className="space-y-4">
             <h3 className="text-base font-medium text-black">Get Started</h3>
             <ul className="space-y-1.5">
               <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors">Remove OnlyFans Leaks</a></li>
@@ -86,7 +86,7 @@ const Footer = () => {
           </div>
 
           {/* Explore Column */}
-          <div className="space-y-4 order-4 md:order-3">
+          <div className="space-y-4">
             <h3 className="text-base font-medium text-black">Explore</h3>
             <ul className="space-y-1.5">
               <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors">Home</a></li>
@@ -99,7 +99,7 @@ const Footer = () => {
           </div>
 
           {/* Company Column */}
-          <div className="space-y-4 order-3 md:order-4">
+          <div className="space-y-4">
             <h3 className="text-base font-medium text-black">Company</h3>
             <ul className="space-y-1.5">
               <li><a href="#" className="text-xs text-[#494f56] hover:text-[#4A90E2] transition-colors md:px-2">About Us</a></li>
