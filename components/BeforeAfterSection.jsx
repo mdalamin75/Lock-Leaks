@@ -34,7 +34,7 @@ const BeforeAfterSection = () => {
         <div className="text-center mb-12 lg:mb-16">
           <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-5xl font-bold mb-1 leading-[1.1] font-plus-jakarta">
             <span className="bg-clip-text text-transparent" style={{
-                backgroundImage: 'linear-gradient(15deg, rgb(48, 100, 112) 20%, rgb(114, 200, 222) 70%);'
+                backgroundImage: 'linear-gradient(15deg, rgb(48, 100, 112) 20%, rgb(114, 200, 222) 70%)'
               }}>Before </span>
             <span 
               className="bg-clip-text text-transparent"

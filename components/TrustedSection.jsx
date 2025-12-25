@@ -117,7 +117,7 @@ const TrustedSection = () => {
           <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 font-plus-jakarta">
             <span className="text-black">Trusted </span>
             <span className="bg-clip-text text-transparent" style={{
-                backgroundImage: 'linear-gradient(15deg, rgb(48, 100, 112) 20%, rgb(114, 200, 222) 70%);'
+                backgroundImage: 'linear-gradient(15deg, rgb(48, 100, 112) 20%, rgb(114, 200, 222) 70%)'
               }}>DMCA </span>
             <span 
               className="bg-clip-text text-transparent"

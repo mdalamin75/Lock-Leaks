@@ -31,6 +31,7 @@ const Header = () => {
           <div className="flex items-center gap-6 lg:gap-8">
 
             {/* Logo */}
+            <Link href="/">
             <div className="relative w-9 h-9 flex-shrink-0">
               <Image
                 src="/img/logo_3.webp"
@@ -39,20 +40,34 @@ const Header = () => {
                 className="object-contain"
               />
             </div>
+            </Link>
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center gap-6 lg:gap-8">
-              {["Services", "Pricing", "Resources", "For Agencies"].map(
-                (item) => (
-                  <a
-                    key={item}
-                    href="#"
-                    className="text-black hover:text-[#4A90E2] transition-colors text-sm font-medium"
-                  >
-                    {item}
-                  </a>
-                )
-              )}
+              <Link
+                href="/services"
+                className="text-black hover:text-[#4A90E2] transition-colors text-sm font-medium"
+              >
+                Services
+              </Link>
+              <a
+                href="#"
+                className="text-black hover:text-[#4A90E2] transition-colors text-sm font-medium"
+              >
+                Pricing
+              </a>
+              <a
+                href="#"
+                className="text-black hover:text-[#4A90E2] transition-colors text-sm font-medium"
+              >
+                Resources
+              </a>
+              <Link
+                href="/agency"
+                className="text-black hover:text-[#4A90E2] transition-colors text-sm font-medium"
+              >
+                For Agencies
+              </Link>
             </div>
           </div>
 
@@ -64,7 +79,7 @@ const Header = () => {
 
               {/* Login Button */}
               <Link href="/login" className="hover:opacity-80 transition-opacity">
-                <div className="relative w-28 h-8">
+                <div className="relative w-16 h-8">
                   <OptimizedImage
                     src="/img/login_button.svg"
                     alt="Login"
@@ -75,7 +90,7 @@ const Header = () => {
 
               {/* Start Free Button */}
               <button className="mt-1">
-                <div className="relative w-32 h-9">
+                <div className="relative w-24 h-9">
                   <OptimizedImage
                     src="/img/blue_button_2.svg"
                     alt="Start Free"
@@ -144,18 +159,34 @@ const Header = () => {
 
                 {/* Mobile Links */}
                 <div className="flex flex-col items-center gap-4 mb-6">
-                  {["Services", "Pricing", "Resources", "For Agencies"].map(
-                    (item) => (
-                      <a
-                        key={item}
-                        href="#"
-                        onClick={closeMenu}
-                        className="text-black hover:text-[#4A90E2] transition-colors text-base font-medium py-2 border-b border-white/20 w-full text-center"
-                      >
-                        {item}
-                      </a>
-                    )
-                  )}
+                  <Link
+                    href="/services"
+                    onClick={closeMenu}
+                    className="text-black hover:text-[#4A90E2] transition-colors text-base font-medium py-2 border-b border-white/20 w-full text-center"
+                  >
+                    Services
+                  </Link>
+                  <a
+                    href="#"
+                    onClick={closeMenu}
+                    className="text-black hover:text-[#4A90E2] transition-colors text-base font-medium py-2 border-b border-white/20 w-full text-center"
+                  >
+                    Pricing
+                  </a>
+                  <a
+                    href="#"
+                    onClick={closeMenu}
+                    className="text-black hover:text-[#4A90E2] transition-colors text-base font-medium py-2 border-b border-white/20 w-full text-center"
+                  >
+                    Resources
+                  </a>
+                  <Link
+                    href="/agency"
+                    onClick={closeMenu}
+                    className="text-black hover:text-[#4A90E2] transition-colors text-base font-medium py-2 border-b border-white/20 w-full text-center"
+                  >
+                    For Agencies
+                  </Link>
                 </div>
 
                 {/* Mobile Buttons */}
